@@ -1,5 +1,6 @@
 @import url(globals.css);
 @import url(colors.css);
+@import url(utility.css);
 
 /* Customs */
 
@@ -28,8 +29,7 @@
     --cta-color: rgba(0, 0, 0, 0.70);
     --post-color:  #FAF1F1;
 
-    --flex: display: flex;
-    --grid: display: grid; 
+
 }
 
 
@@ -39,5 +39,6 @@ header {
     padding: 10px 0 0 10px;
     height: 90px;
   }
+
 
 /* Footer */
