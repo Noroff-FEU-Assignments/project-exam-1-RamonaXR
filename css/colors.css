@@ -1,0 +1,10 @@
+@import url(index.css);
+@import url(globals.css);
+
+footer {
+    background: var(--background-footer);
+}
+
+header {
+    background: var(--background-header);
+}
