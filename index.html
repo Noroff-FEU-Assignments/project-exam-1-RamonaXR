@@ -7,6 +7,7 @@
       name="description"
       content="Welcome to the world of beauty and loving yourself. The key to self-love is self-care"
     />
+    <link rel="shortcut icon" href="#" type="image/x-icon">
     <title>Beauty by Ramona</title>
     <link rel="stylesheet" href="/css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,13 +17,17 @@
     <script defer type="module" src="./js/index.js"></script>
   </head>
   <body class="flex flex-column">
-    <header class="flex justify-space-between align-items-center">
-      <a href="#" class="logo-header"></a>
-      <input type="checkbox" id="menu-checkbox" />
-      <label class="hamburger" for="menu-checkbox">
-        <i class="fa-solid fa-bars"></i><span class="hide">menu</span></label>
-      <nav class="flex nav-head">
-        <ul class="flex">
+    <div class="overlay hide"></div>
+    <header class="flex">
+      <a href="#" class="logo-header">LOGO</a>
+      <div class="flex justify-end hamburger-container">
+        <div class="hamburger-wrap">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+      <nav class="hide">
+        <div class="flex justify-center align-items-center closing-btn"><i class="fa-solid fa-xmark fa-lg"></i></div>
+        <ul class="flex flex-column">
           <li class="links-header"><a href="#">Blog</a></li>
           <li class="links-header"><a href="#">About</a></li>
           <li class="links-header"><a href="#">Contact</a></li>
@@ -34,55 +39,23 @@
         <h1>A deep dive in to self-care and self-love</h1>
         <a href="#">See all posts</a>
       </div>
-      <div>
         <p>"True beauty comes within inside"</p>
-      </div>
-      <div>
-        <p>Latest posts</p>
-      </div>
+        <h2>Latest posts</p>
       <article class="blog-carousel-1">
-        <div class="post-image">
-          <img src="#" alt="Will be fetched" />
-        </div>
-        <div class="post-content">
-          <h2>Rosewater for skin-wealth?</h2>
-          <p class="preview-text">Is all the hype true?</p>
-          <a href="#" class="read-more-home">Read More</a>
-        </div>
+        ...loading
       </article>
       <article class="blog-carousel-2">
-        <div class="post-image">
-          <img src="#" alt="Will be fetched" />
-        </div>
-        <div class="post-content">
-          <h2>Rosewater for skin-wealth?</h2>
-          <p class="preview-text">Is all the hype true?</p>
-          <a href="#" class="read-more-home">Read More</a>
-        </div>
+        ...loading
       </article>
       <article class="blog-carousel-3">
-        <div class="post-image">
-          <img src="#" alt="Will be fetched" />
-        </div>
-        <div class="post-content">
-          <h2>Rosewater for skin-wealth?</h2>
-          <p class="preview-text">Is all the hype true?</p>
-          <a href="#" class="read-more-home">Read More</a>
-        </div>
+        ...loading
       </article>
       <article class="blog-carousel-4">
-        <div class="post-image">
-          <img src="#" alt="Will be fetched" />
-        </div>
-        <div class="post-content">
-          <h2>Rosewater for skin-wealth?</h2>
-          <p class="preview-text">Is all the hype true?</p>
-          <a href="#" class="read-more-home">Read More</a>
-        </div>
+        ...loading
       </article>
     </main>
     <footer>
-        <nav class="flex justify-space-between align-items-center">
+        <div class="flex justify-space-between align-items-center" role="navigation">
             <ul class="flex">
                 <li class="links"><a href="#">Contact</a></li>
                 <li class="links"><a href="#">About</a></li>
@@ -91,7 +64,7 @@
                 <a href="#"><i class="links-logo fa-brands fa-facebook"></i></a>
                 <a href="#"><i class="links-logo fa-brands fa-instagram"></i></a>
             </div>
-        </nav>
+          </div>
     </footer>
   </body>
 </html>

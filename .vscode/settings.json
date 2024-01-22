@@ -1,4 +1,4 @@
 {
-    "liveServer.settings.CustomBrowser": null,
+    "liveServer.settings.CustomBrowser": "chrome",
     "liveServer.settings.donotShowInfoMsg": false
 }

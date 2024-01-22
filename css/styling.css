@@ -2,18 +2,66 @@
 /* Header */
 
 header {
-    padding: 10px 0 0 10px;
     height: 90px;
-  }
-
-.links,
-.links-header,
-.links-logo {
-    padding: var(--padding-10);
+    position: relative;
 }
 
-ul {
-    list-style-type: none;
+/* Nav */ 
+
+nav {
+    position: absolute;
+    height: 100vh;
+    width: 150px;
+    top: 0px;
+    z-index: 10;
+    background-color: var(--post-color);
+    right: -150px;
+    padding: 20px 0 0 0;
+    display: flex;
 }
+
+nav ul {
+    padding-top: 20px;
+    gap: 15px;
+    
+}
+
+nav a {
+    padding: 10px 0;
+}
+
+.closing-btn {
+    height: 40px;
+    width: 40px;
+}
+
+.hamburger-wrap,
+.closing-btn {
+    cursor: pointer;
+}
+
+.hamburger-container {
+    flex: 1;
+}
+
+/* Body */
+
+body {
+    overflow: hidden;
+}
+
+/* Overlay */
+
+.overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 80%;
+    z-index: 5;
+}
+
 
 /* Footer */

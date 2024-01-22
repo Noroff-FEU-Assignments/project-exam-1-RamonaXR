@@ -1,67 +1,7 @@
-/* For display and none-display hamburger-menu*/
-.menu-toggle {
-  display: none;
-}
+/* Desktop */
 
-.hamburger,
-#menu-checkbox {
-  display: none;
-}
 
-@media (max-width: 800px) {
-  .menu-toggle {
-    display: block;
-  }
 
-  nav {
-    display: none;
-  }
 
-  .hamburger {
-    display: block;
-    z-index: 20;
-    padding: var(--padding-10);
-  }
 
-  .nav-head {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 150px;
-    height: calc(100% - 60px);
-    background: var(--post-color);
-    transition: right 0.3s;
-    z-index: 15;
-    overflow-y: auto;
-  }
 
-  .nav-head.show {
-    right: 0;
-  }
-
-  .nav-head ul {
-    display: block;
-    padding-top: 20px;
-  }
-
-  .nav-head ul li {
-    opacity: 0;
-    transform: translateX(-20px);
-    transition: transform 0.4s, opacity 0.4s;
-  }
-
-  .nav-head.show ul li {
-    opacity: 1;
-    transform: translateX(0);
-  }
-
-  .nav-head.show ul li:nth-child(1) {
-    transition-delay: 0.3s;
-  }
-  .nav-head.show ul li:nth-child(2) {
-    transition-delay: 0.5s;
-  }
-  .nav-head.show ul li:nth-child(3) {
-    transition-delay: 0.8s;
-  }
-}

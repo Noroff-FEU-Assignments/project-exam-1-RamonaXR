@@ -47,6 +47,9 @@ img {
   max-width: 100%;
 }
 
+ul {
+  list-style-type: none;
+}
 
 
 /*Adjust when media queries*/ 
