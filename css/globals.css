@@ -1,4 +1,4 @@
-@import url(index.css);
+
 
 *,
 *::before,
@@ -20,8 +20,7 @@ h4 {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
+  position: relative;
   font-family: var(--montserrat);
   font-size: var(--size16);
   font-weight: var(--weight400);
@@ -39,9 +38,7 @@ body {
 
 main {
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  gap: var(--gap-normal);
   max-width: 1500px;
   margin: 0 auto;
 }
@@ -50,14 +47,14 @@ img {
   max-width: 100%;
 }
 
-a {
-  text-decoration: none;
-}
 
 
 /*Adjust when media queries*/ 
 
-/*nav,
-#menu-checkbox {
-  display: none;
-}*/
+
+
+
+
+
+
+

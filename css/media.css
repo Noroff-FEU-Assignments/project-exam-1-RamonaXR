@@ -1,0 +1,34 @@
+/* For display and none-display hamburger-menu*/
+.menu-toggle {
+  display: none;
+}
+
+.hamburger,
+#menu-checkbox {
+  display: none;
+}
+
+  
+  
+
+@media (max-width: 800px) {
+  .menu-toggle {
+    display: block;
+  }
+
+nav {
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .hamburger {
+    display: block;
+    z-index: 20;
+    padding: var(--padding-10);
+  }
+
+ 
+
+
+}

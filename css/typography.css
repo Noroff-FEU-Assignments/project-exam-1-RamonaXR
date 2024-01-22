@@ -1,0 +1,19 @@
+
+
+a {
+    text-decoration: none;
+    font-size: var(--size16);
+}
+
+h1 {
+    font-size: var(--size32);
+}
+
+.links a,
+.links-header a {
+    font-family: var(--island);
+    font-size: var(--size24);
+    font-weight: var(--weight400);
+    color:rgb(62, 52, 52);
+}
+

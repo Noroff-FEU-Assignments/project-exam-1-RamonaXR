@@ -1,6 +1,9 @@
 @import url(globals.css);
 @import url(colors.css);
 @import url(utility.css);
+@import url(typography.css);
+@import url(media.css);
+@import url(styling.css);
 
 /* Customs */
 
@@ -21,6 +24,8 @@
     --size36: 2.25rem;
 
     --border-radius: 20px; 
+    --gap-normal: 20px;
+    --padding-10: 10px;
 
     --boxshadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 
@@ -33,12 +38,3 @@
 }
 
 
-/* Header */
-
-header {
-    padding: 10px 0 0 10px;
-    height: 90px;
-  }
-
-
-/* Footer */

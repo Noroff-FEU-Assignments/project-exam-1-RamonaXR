@@ -1,5 +1,4 @@
-@import url(index.css);
-@import url(globals.css);
+
 
 footer {
     background: var(--background-footer);
@@ -7,4 +6,8 @@ footer {
 
 header {
     background: var(--background-header);
+}
+
+.hero {
+    background: var(--post-color);
 }

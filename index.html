@@ -10,28 +10,25 @@
     <title>Beauty by Ramona</title>
     <link rel="stylesheet" href="/css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Island+Moments&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Island+Moments&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Island+Moments&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a2089e7094.js" crossorigin="anonymous"></script>
   </head>
-  <body>
-    <header>
+  <body class="flex flex-column">
+    <header class="flex justify-space-between align-items-center">
       <a href="#" class="logo-header"></a>
       <input type="checkbox" id="menu-checkbox" />
       <label class="hamburger" for="menu-checkbox">
-        <i class="fa-solid fa-bars"></i><span class="hide">menu</span></label
-      >
-      <nav class="flex">
-        <ul>
-          <li class="flex"><a href="#" class="align-items-end">Blog</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
+        <i class="fa-solid fa-bars"></i><span class="hide">menu</span></label>
+      <nav class="flex nav-head">
+        <ul class="flex">
+          <li class="links-header"><a href="#">Blog</a></li>
+          <li class="links-header"><a href="#">About</a></li>
+          <li class="links-header"><a href="#">Contact</a></li>
         </ul>
       </nav>
     </header>
-    <main>
+    <main class="flex flex-column">
       <div class="hero">
         <h1>A deep dive in to self-care and self-love</h1>
         <a href="#">See all posts</a>
@@ -84,14 +81,14 @@
       </article>
     </main>
     <footer>
-        <nav>
-            <ul>
-                <li><a href="#"></a>Contact</li>
-                <li><a href="#"></a>About</li>
+        <nav class="flex justify-space-between align-items-center">
+            <ul class="flex">
+                <li class="links"><a href="#">Contact</a></li>
+                <li class="links"><a href="#">About</a></li>
             </ul>
             <div>
-                <a href="#"><img src="#" alt="facebook-icon"></a>
-                <a href="#"><img src="#" alt="insta-icon"></a>
+                <a href="#"><i class="links-logo fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="links-logo fa-brands fa-instagram"></i></a>
             </div>
         </nav>
     </footer>
