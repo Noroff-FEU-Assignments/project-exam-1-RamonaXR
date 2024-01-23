@@ -50,6 +50,12 @@ body {
     overflow: hidden;
 }
 
+/* Hero */
+
+.hero {
+    width: 100vw;
+}
+
 /* Overlay */
 
 .overlay {
@@ -65,3 +71,20 @@ body {
 
 
 /* Footer */
+
+
+.p-footer,
+header a,
+.hamburger-container,
+footer a {
+    padding: var(--padding-10);
+} 
+
+.hero a,
+.hero h1 {
+    padding: 20px;
+}
+
+
+
+

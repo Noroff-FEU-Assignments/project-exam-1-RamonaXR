@@ -1,19 +1,40 @@
 
 
+
+
 a {
     text-decoration: none;
-    font-size: var(--size16);
-}
-
-h1 {
-    font-size: var(--size32);
-}
-
-.links a,
-.links-header a {
-    font-family: var(--island);
     font-size: var(--size24);
+}
+
+.links-header a,
+footer a {
     font-weight: var(--weight400);
     color:rgb(62, 52, 52);
 }
 
+
+h1,
+.links a {
+    font-size: var(--size32);
+}   
+
+
+
+.links-header a {
+    font-size: var(--size24);
+    font-weight: var(--weight400);
+    
+}
+
+
+.links a,
+.links-header a,
+.under-hero {
+    font-family: var(--island);
+}
+
+
+.hero {
+    text-align: center;
+}
