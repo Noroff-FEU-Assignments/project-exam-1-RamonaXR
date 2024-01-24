@@ -1,4 +1,4 @@
-/* Show hamburgermenu*/
+// Show hamburgermenu
 
 
 const menuButton = document.querySelector(".hamburger-wrap");
