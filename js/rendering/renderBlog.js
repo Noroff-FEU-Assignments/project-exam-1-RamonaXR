@@ -48,6 +48,7 @@
 
 
 export function renderBlog(posts){
+    console.log(posts);
     const parent = document.querySelector(".blogposts");
     parent.innerHTML = ""; 
 
@@ -56,19 +57,27 @@ export function renderBlog(posts){
         element.classList.add("posts");
     
         const heading = document.createElement("h2");
-        heading.textContent = post.acf.title; 
+        heading.textContent = posts[i].acf.title; 
         heading.classList.add("h2-posts");
         element.append(heading);
 
         const image = document.createElement("img");
-        image.src = post.acf.img;
-        image.setAttribute("alt", post[i].images[0].alt);
+        image.src = posts[i].acf.blog_image;
+        image.setAttribute("alt", posts[i].acf.blog_title); // REMEMBER ADDING ALT
         image.classList.add("posts-img");
         element.append(image);
 
         const paragraph1 = document.createElement('p');
-        paragraph1.textContent = post.acf.blog_p1;
-        article.appendChild(paragraph1);
+        paragraph1.textContent = posts[i].acf.blog_p1;
+        element.appendChild(paragraph1);
+
+        const paragraph2 = document.createElement('p');
+        paragraph1.textContent = posts[i].acf.blog_p2;
+        element.appendChild(paragraph2);
+
+        const paragraph3 = document.createElement('p');
+        paragraph1.textContent = posts[i].acf.blog_p3;
+        element.appendChild(paragraph3);
 
 
     

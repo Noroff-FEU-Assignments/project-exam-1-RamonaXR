@@ -15,8 +15,6 @@ switch (window.location.pathname){
         break; 
     case "/blog/":
         createBlog();
-        renderBlog();
-        toggleMenu();
         break;
     case "/post/":
         //Code here
