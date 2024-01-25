@@ -21,6 +21,6 @@ switch (window.location.pathname){
     case "/post/":
         createPost();
         break; 
-    case "/index.html":
+    case "/":
         createHome();
 }
