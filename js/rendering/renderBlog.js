@@ -44,7 +44,7 @@ export function renderBlog(posts){
 
 
         const btn = document.createElement("a");
-        btn.href = "/post" + "?id=" + posts[i].id;
+        btn.href = "/post/" + "?id=" + posts[i].id;
         btn.classList.add("button");
         btn.textContent = "Read More";
         element.append(btn);

@@ -6,9 +6,10 @@ import { fetchData } from "../data/fetchApi.js"
 export async function createPost(){
     try {
         const id = getID();
-        const newURL = "exam1.ramonaelise.one/wp-json/wp/v2/posts/" + id + "?acf_format=standard";
+        const newURL = "https://exam1.ramonaelise.one/wp-json/wp/v2/posts/" + id + "?acf_format=standard";
         const post = await fetchData(newURL);
         renderPost(post);
+        document.title = post.acf.blog_title;
     } catch (error) {
         console.log(error); // ADD BETTER ERROR
     }
