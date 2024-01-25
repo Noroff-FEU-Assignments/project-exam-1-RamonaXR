@@ -32,15 +32,15 @@ export function renderBlog(posts){
 
         const paragraph1 = document.createElement('p');
         paragraph1.textContent = posts[i].acf.blog_p1;
-        element.appendChild(paragraph1);
+        element.append(paragraph1);
 
         const paragraph2 = document.createElement('p');
-        paragraph1.textContent = posts[i].acf.blog_p2;
-        element.appendChild(paragraph2);
+        paragraph2.textContent = posts[i].acf.blog_p2;
+        element.append(paragraph2);
 
         const paragraph3 = document.createElement('p');
-        paragraph1.textContent = posts[i].acf.blog_p3;
-        element.appendChild(paragraph3);
+        paragraph3.textContent = posts[i].acf.blog_p3;
+        element.append(paragraph3);
 
 
         const btn = document.createElement("a");

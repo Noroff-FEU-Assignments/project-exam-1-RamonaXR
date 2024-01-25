@@ -1,4 +1,5 @@
 export function renderPost(post){
+    console.log(post);
 
     const parent = document.querySelector(".post");
 
@@ -15,9 +16,10 @@ export function renderPost(post){
         title.textContent = post.acf.blog_title; 
         title.classList.add("h1-post");
         element.append(title);
+        
 
         const image = document.createElement("img");
-        image.src = post[i].acf.blog_image;
+        image.src = post.acf.blog_image;
         image.setAttribute("alt", post.acf.blog_title); // REMEMBER ADDING ALT
         image.classList.add("posts-img");
         element.append(image);
@@ -29,15 +31,15 @@ export function renderPost(post){
 
         const paragraph1 = document.createElement('p');
         paragraph1.textContent = post.acf.blog_p1;
-        element.appendChild(paragraph1);
+        element.append(paragraph1);
 
         const paragraph2 = document.createElement('p');
-        paragraph1.textContent = post.acf.blog_p2;
-        element.appendChild(paragraph2);
+        paragraph2.textContent = post.acf.blog_p2;
+        element.append(paragraph2);
 
         const paragraph3 = document.createElement('p');
-        paragraph1.textContent = post.acf.blog_p3;
-        element.appendChild(paragraph3);
+        paragraph3.textContent = post.acf.blog_p3;
+        element.append(paragraph3);
 
 
 
