@@ -1,3 +1,6 @@
+
+
+
 export function renderHome(posts){
 
     const parent = document.querySelector(".carousel-container");
