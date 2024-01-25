@@ -1,7 +1,7 @@
+
 import { toggleMenu } from "./hamburger/hamburger.js";
-import { fetchData } from "./data/fetchApi.js";
-    
-fetchData ()
+import { createBlog } from "./pages/blog.js";
+import { renderBlog } from "./rendering/renderBlog.js";
 
 toggleMenu()
 
@@ -13,12 +13,14 @@ switch (window.location.pathname){
     case "/contact":
         // Code
         break; 
-    case "blog":
-        // Code 
+    case "/blog/":
+        createBlog();
+        renderBlog();
+        toggleMenu();
         break;
-    case "post":
+    case "/post/":
         //Code here
         break; 
-    case "index":
+    case "/index/":
         createHome();
 }

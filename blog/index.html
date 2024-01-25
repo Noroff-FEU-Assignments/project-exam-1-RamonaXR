@@ -14,20 +14,35 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Island+Moments&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a2089e7094.js" crossorigin="anonymous"></script>
-    <script defer type="module" src="./js/index.js"></script>
+    <script defer type="module" src="/js/index.js"></script>
 </head>
-<body>
-    <header>
-    </header>
+<body class="flex flex-column">
+    <div class="overlay hide"></div>
+    <header class="flex align-items-center">
+        <a href="#" class="logo-header">LOGO</a>
+        <div class="flex justify-end hamburger-container">
+          <div class="hamburger-wrap">
+            <i class="fa-solid fa-bars fa-xl"></i>
+          </div>
+        </div>
+        <nav class="hide">
+          <div class="flex justify-center align-items-center closing-btn"><i class="fa-solid fa-xmark fa-lg"></i></div>
+          <ul class="flex flex-column">
+            <li class="links-header"><a href="/blog/">Blog</a></li>
+            <li class="links-header"><a href="/about/">About</a></li>
+            <li class="links-header"><a href="/contact/">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
     <main>
         <h1>All posts</h1>
-        <article>...Loading</article>
-        <article>...Loading</article>
-        <article>...Loading</article>
-        <article>...Loading</article>
-        <article>...Loading</article>
-        <article>...Loading</article>
-        <article>...Loading</article>
+        <article class="blogposts">...Loading</article>
+        <article class="blogposts">...Loading</article>
+        <article class="blogposts">...Loading</article>
+        <article class="blogposts">...Loading</article>
+        <article class="blogposts">...Loading</article>
+        <article class="blogposts">...Loading</article>
+        <article class="blogposts">...Loading</article>
         <article>...Loading</article>
         <article>...Loading</article>
         <button>See more</button>
