@@ -7,6 +7,6 @@ export async function createBlog(){
         const posts = await fetchData(url);
         renderBlog(posts); 
     } catch (error) {
-        console.log(error);
+        console.log(error); // ADD BETTER ERROR 
     }
 }

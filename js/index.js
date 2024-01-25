@@ -1,7 +1,8 @@
 
 import { toggleMenu } from "./hamburger/hamburger.js";
 import { createBlog } from "./pages/blog.js";
-import { renderBlog } from "./rendering/renderBlog.js";
+import { createPost } from "./pages/post.js";
+
 
 toggleMenu()
 
@@ -17,7 +18,7 @@ switch (window.location.pathname){
         createBlog();
         break;
     case "/post/":
-        //Code here
+        createPost();
         break; 
     case "/index/":
         createHome();
