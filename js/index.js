@@ -2,6 +2,7 @@
 import { toggleMenu } from "./hamburger/hamburger.js";
 import { createBlog } from "./pages/blog.js";
 import { createPost } from "./pages/post.js";
+import { createHome } from "./pages/home.js";
 
 
 toggleMenu()
@@ -20,6 +21,6 @@ switch (window.location.pathname){
     case "/post/":
         createPost();
         break; 
-    case "/index/":
+    case "/index.html":
         createHome();
 }
