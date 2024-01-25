@@ -1,6 +1,7 @@
 export function renderHome(posts){
 
-    const parent = document.querySelector(".blog-carousel-1");
+    const parent = document.querySelector(".carousel-container");
+   
    
 
     while (parent.firstChild) {
@@ -36,4 +37,9 @@ export function renderHome(posts){
 
         parent.append(element);
     }
+    
+
+
+    
 } 
+
