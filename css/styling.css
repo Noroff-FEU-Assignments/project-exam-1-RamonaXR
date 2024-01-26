@@ -52,8 +52,7 @@ nav a {
     width: 100%;
     max-width: 300px;
     min-width: 220px;
-    height: 350px;
-    padding: 10px;
+    height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -63,8 +62,8 @@ nav a {
 }
 
 .posts img {
-    height: 160px;
-    width: 160px;
+    height: 200px;
+    width: 200px;
     border-radius: var(--border-radius);
 }
 .blogposts {
