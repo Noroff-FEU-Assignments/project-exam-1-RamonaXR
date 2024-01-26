@@ -46,6 +46,37 @@ nav a {
 
 /* Body */
 
+.posts {
+    border-radius: var(--border-radius);
+    background-color: var(--post-color);
+    width: 100%;
+    max-width: 300px;
+    min-width: 220px;
+    height: 350px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    
+}
+
+.posts img {
+    height: 160px;
+    width: 160px;
+    border-radius: var(--border-radius);
+}
+.blogposts {
+    gap: 20px;
+}
+
+.blogposts a, 
+.blogposts img, 
+.blogposts h2,
+.blogposts h3 {
+    padding: var(--padding-10);
+}
 
 
 /* Hero */
@@ -82,6 +113,7 @@ footer a {
 .hero h1 {
     padding: 20px;
 }
+
 
 
 
