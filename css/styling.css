@@ -46,24 +46,37 @@ nav a {
 
 /* Body */
 
+button,
+.button {
+  background: #4C4B4B;
+  font-family: var(--montserrat);
+  color: white;
+  font-size: var(--size16);
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+/* Blog */
+
 .posts {
     border-radius: var(--border-radius);
     background-color: var(--post-color);
     width: 100%;
-    max-width: 300px;
+    max-width: 350px;
     min-width: 220px;
-    height: 400px;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     text-align: center;
     
+    
 }
 
 .posts img {
-    height: 200px;
-    width: 200px;
+    max-height: 350px;
+    max-width: 300px;
     border-radius: var(--border-radius);
 }
 .blogposts {
@@ -75,6 +88,15 @@ nav a {
 .blogposts h2,
 .blogposts h3 {
     padding: var(--padding-10);
+}
+
+.h1-blog {
+    padding: 30px;
+    margin-bottom: 20px;
+}
+
+.button-blog {
+    padding: 20px;
 }
 
 
