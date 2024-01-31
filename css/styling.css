@@ -56,6 +56,11 @@ button,
   margin-top: 10px;
 }
 
+button {
+    height: 40px;
+    width: 120px;
+}
+
 /* Blog */
 
 .posts {
