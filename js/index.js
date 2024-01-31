@@ -10,10 +10,10 @@ toggleMenu()
 
 
 switch (window.location.pathname){
-    case "/about":
+    case "/about/":
         // Code
         break;
-    case "/contact":
+    case "/contact/":
         // Code
         break; 
     case "/blog/":

@@ -41,6 +41,10 @@ export function renderPost(post){
         paragraph3.textContent = post.acf.blog_p3;
         element.append(paragraph3);
 
+        const paragraph4 = document.createElement('p');
+        paragraph3.textContent = post.acf.date_of_post;
+        element.append(paragraph4);
+
 
 
 
