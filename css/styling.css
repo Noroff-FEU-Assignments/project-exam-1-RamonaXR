@@ -80,9 +80,10 @@ button {
 }
 
 .posts img {
-    max-height: 350px;
-    max-width: 300px;
+    height: 350px;
+    width: auto;
     border-radius: var(--border-radius);
+    padding: var(--padding-10);
 }
 .blogposts {
     gap: 20px;
@@ -98,6 +99,8 @@ button {
 .blogposts h2 {
     margin-top: 15px;
     margin-bottom: 15px;
+    font-weight: var(--weight600);
+    font-size: var(--size20);
 }
 .h1-blog {
     padding: 30px;
@@ -107,6 +110,20 @@ button {
 .button-blog {
     padding: 20px;
 }
+
+.blogposts h3 {
+    font-weight: var(--weight500);
+}
+
+.sort-by {
+    padding: var(--padding-10);
+}
+
+.sort-select {
+    padding: var(--padding-10);
+}
+
+
 
 
 /* Hero */
