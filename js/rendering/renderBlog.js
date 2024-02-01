@@ -6,9 +6,9 @@ export function renderBlog(posts){
 
     const parent = document.querySelector(".blogposts");
 
-    while (parent.firstChild) {
+    /*while (parent.firstChild) {
         parent.removeChild(parent.firstChild);
-    }
+    }*/
 
     for (let i = 0; i < posts.length; i++){
         const element = document.createElement("article");

@@ -1,3 +1,6 @@
 .carousel-container {
     padding-bottom: 10px;
+    gap: 20px;
+    flex-wrap: wrap;
 }
+

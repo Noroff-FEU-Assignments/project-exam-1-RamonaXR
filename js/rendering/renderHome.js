@@ -7,9 +7,9 @@ export function renderHome(posts){
    
    
 
-    while (parent.firstChild) {
+    /*while (parent.firstChild) {
         parent.removeChild(parent.firstChild);
-    }
+    }*/
 
     for (let i = 0; i < 4; i++){
         const element = document.createElement("article");

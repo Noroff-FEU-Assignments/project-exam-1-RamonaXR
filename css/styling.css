@@ -66,10 +66,8 @@ button {
 .posts {
     border-radius: var(--border-radius);
     background-color: var(--post-color);
-    width: 100%;
     max-width: 350px;
     min-width: 220px;
-    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -80,7 +78,6 @@ button {
 }
 
 .posts img {
-    max-height: 350px;
     width: auto;
     border-radius: var(--border-radius);
     padding: var(--padding-10);
