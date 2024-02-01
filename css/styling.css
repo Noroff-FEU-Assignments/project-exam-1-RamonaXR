@@ -162,7 +162,12 @@ button {
 /* Hero */
 
 .hero {
-    width: 100vw;
+    width: 100%;
+    
+}
+
+.under-hero {
+    font-size: var(--size32);
 }
 
 /* Overlay */
@@ -178,6 +183,10 @@ button {
     z-index: 5;
 }
 
+/* Home */ 
+
+
+
 
 /* Footer */
 
@@ -189,11 +198,10 @@ footer a {
     padding: var(--padding-10);
 } 
 
-.hero a,
+
 .hero h1 {
     padding: 20px;
 }
-
 
 
 

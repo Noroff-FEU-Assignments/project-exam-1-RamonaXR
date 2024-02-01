@@ -39,8 +39,9 @@ body {
 main {
   flex: 1;
   gap: var(--gap-normal);
-  max-width: 1500px;
+  max-width: 2000px;
   margin: 0 auto;
+  width: 100%;
 }
 
 img {
