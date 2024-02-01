@@ -1,7 +1,39 @@
 /* Desktop */
 
 
+@media (min-width: 1200px) {
 
+header {
+    padding: 30px;
+    height: auto;
+}
+
+.navigation {
+    position: static;
+    display: flex;
+    height: auto;
+    background-color: transparent;
+    width: 100%;
+}
+
+
+.navigation ul {
+    flex-direction: row;
+    flex: 1;
+    justify-content: flex-end;
+    gap: 30px;
+}
+
+.links-header a {
+    font-size: var(--size48);
+}
+
+.closing-btn,
+.hamburger-container {
+    display: none;
+}
+
+}
 
 
 

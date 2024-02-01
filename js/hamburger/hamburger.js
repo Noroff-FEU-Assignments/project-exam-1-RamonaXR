@@ -10,7 +10,7 @@ export function toggleMenu() {
     
 
     menuButton.addEventListener("click", function() {
-        navElement.classList.remove("hide");
+        navElement.style.display = "flex";
         overlay.classList.remove("hide");
         setTimeout(menuAction, 100);
     })
@@ -22,7 +22,7 @@ export function toggleMenu() {
 
 
 export function closeMenu() {
-    navElement.classList.add("hide");
+    navElement.style.display = "none";
     navElement.style.right = "-150px";
     overlay.classList.add("hide");
 }

@@ -17,7 +17,7 @@ nav {
     background-color: var(--post-color);
     right: -150px;
     padding: 20px 0 0 0;
-    display: flex;
+    display: none;
 }
 
 nav ul {

@@ -2,10 +2,10 @@
 @import url(colors.css);
 @import url(utility.css);
 @import url(typography.css);
-@import url(media.css);
 @import url(styling.css);
 @import url(positioning.css);
 @import url(carousel.css);
+@import url(media.css);
 
 /* Customs */
 
@@ -24,6 +24,7 @@
     --size24: 1.5rem;
     --size32: 2rem;
     --size36: 2.25rem;
+    --size48: 3rem;
 
     --border-radius: 20px; 
     --gap-normal: 20px;
