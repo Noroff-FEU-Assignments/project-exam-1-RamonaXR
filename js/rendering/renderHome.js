@@ -1,5 +1,5 @@
 
-
+// Rendering posts for homepage
 
 export function renderHome(posts){
 
@@ -22,7 +22,7 @@ export function renderHome(posts){
 
         const image = document.createElement("img");
         image.src = posts[i].acf.blog_image;
-        image.setAttribute("alt", posts[i].acf.blog_title); // REMEMBER ADDING ALT
+        image.setAttribute("alt", posts[i].acf.alt_text); // REMEMBER ADDING ALT
         image.classList.add("posts-img");
         element.append(image);
 

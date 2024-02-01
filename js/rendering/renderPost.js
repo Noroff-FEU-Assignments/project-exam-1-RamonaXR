@@ -1,3 +1,6 @@
+// Rendering single posts 
+
+
 export function renderPost(post){
     console.log(post);
 
@@ -20,7 +23,7 @@ export function renderPost(post){
 
         const image = document.createElement("img");
         image.src = post.acf.blog_image;
-        image.setAttribute("alt", post.acf.blog_title); // REMEMBER ADDING ALT
+        image.setAttribute("alt", post.acf.alt_text); // REMEMBER ADDING ALT
         image.classList.add("posts-img");
         element.append(image);
 
@@ -42,7 +45,8 @@ export function renderPost(post){
         element.append(paragraph3);
 
         const paragraph4 = document.createElement('p');
-        paragraph3.textContent = post.acf.date_of_post;
+        paragraph4.textContent = post.acf.date_of_post;
+        paragraph4.classList.add("date-post");
         element.append(paragraph4);
 
 

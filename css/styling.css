@@ -80,7 +80,7 @@ button {
 }
 
 .posts img {
-    height: 350px;
+    max-height: 350px;
     width: auto;
     border-radius: var(--border-radius);
     padding: var(--padding-10);
@@ -92,7 +92,8 @@ button {
 .blogposts a, 
 .blogposts img, 
 .blogposts h2,
-.blogposts h3 {
+.blogposts h3,
+.button {
     padding: var(--padding-10);
 }
 
@@ -124,7 +125,39 @@ button {
 }
 
 
+/*Post*/
 
+.post {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+}
+
+.post p {
+    padding:20px;
+}
+
+.post h1,
+.post h2 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.post h2 {
+    font-weight: var(--weight500);
+    font-size: var(--size24);
+}
+
+.button-back {
+    margin-left: 15px;
+}
+
+.date-post {
+    font-size: 0.8rem;
+}
 
 /* Hero */
 
