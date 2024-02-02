@@ -66,7 +66,11 @@ button,
 .blogposts a, 
 .blogposts img, 
 .blogposts h2,
-.blogposts h3 {
+.blogposts h3
+.posts a, 
+.posts img, 
+.posts h2,
+.posts h3  {
     padding: var(--padding-10);
 }
 
