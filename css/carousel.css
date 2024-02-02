@@ -1,6 +1,35 @@
-.carousel-container {
+/*.carousel-container {
     padding-bottom: 10px;
     gap: 20px;
     flex-wrap: wrap;
+} */
+
+
+.carousel-container {
+    position: relative;
+    padding: 20px;
 }
 
+.arrow {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    user-select: none;
+    z-index: 2;
+}
+
+.left-arrow {
+    left: 0;
+    padding: var(--padding-10);
+}
+
+.right-arrow {
+    right: 0;
+    padding: var(--padding-10);
+}
+
+.carousel-item {
+    display: none; 
+}
