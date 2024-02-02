@@ -52,66 +52,30 @@ button,
   font-family: var(--montserrat);
   color: white;
   font-size: var(--size16);
-  margin-bottom: 20px;
-  margin-top: 10px;
+  padding: var(--padding-10);
+  width: 120px;
+  align-self: center;
+  margin-top: 20px;
 }
 
-button {
-    height: 40px;
-    width: 120px;
-}
+
 
 /* Blog */
 
-.posts {
-    border-radius: var(--border-radius);
-    background-color: var(--post-color);
-    max-width: 350px;
-    min-width: 220px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    box-shadow: var(--boxshadow);
-    
-}
-
-.posts img {
-    width: auto;
-    border-radius: var(--border-radius);
-    padding: var(--padding-10);
-}
-.blogposts {
-    gap: 20px;
-}
 
 .blogposts a, 
 .blogposts img, 
 .blogposts h2,
-.blogposts h3,
-.button {
+.blogposts h3 {
     padding: var(--padding-10);
 }
 
-.blogposts h2 {
-    margin-top: 15px;
-    margin-bottom: 15px;
-    font-weight: var(--weight600);
-    font-size: var(--size20);
-}
+
 .h1-blog {
     padding: 30px;
     margin-bottom: 20px;
 }
 
-.button-blog {
-    padding: 20px;
-}
-
-.blogposts h3 {
-    font-weight: var(--weight500);
-}
 
 .sort-by {
     padding: var(--padding-10);
@@ -120,6 +84,70 @@ button {
 .sort-select {
     padding: var(--padding-10);
 }
+
+
+.blogposts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-evenly;
+    padding: var(--padding-10);
+}
+
+.posts {
+    
+    flex: 1 1 200px; 
+    max-width: 340px; 
+    display: flex;
+    flex-direction: column;
+    background-color: var(--post-color);
+    box-shadow: var(--boxshadow);
+    border-radius: var(--border-radius);
+    overflow: hidden; 
+    max-width: 340px; 
+    text-align: center;
+    
+}
+
+.image-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    background-size: cover;
+    background-position: center;
+}
+
+.image-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+
+}
+
+
+.h2-posts {
+    font-weight: var(--weight600);
+    font-size: var(--size24);
+    
+}
+
+.content-wrapper {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1; 
+}
+
+.button-blog {
+    padding: 20px;
+    
+}
+
 
 
 /*Post*/
