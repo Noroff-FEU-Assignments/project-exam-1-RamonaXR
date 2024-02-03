@@ -3,6 +3,9 @@ import { url } from "../data/constants.js";
 import { fetchData } from "../data/fetchApi.js";
 
 
+
+
+
 const parent = document.querySelector(".carousel-container") 
 
 export async function createHome(){
