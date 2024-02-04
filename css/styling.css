@@ -53,7 +53,6 @@ button,
   color: white;
   font-size: var(--size16);
   padding: var(--padding-10);
-  width: auto;
   align-self: center;
   margin-top: 20px;
   margin-bottom: 20px;

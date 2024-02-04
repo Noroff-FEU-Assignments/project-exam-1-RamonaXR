@@ -38,6 +38,11 @@ export function renderBlog(posts){
         heading.classList.add("h3-posts");
         contentWrapper.append(heading);
 
+        const paragraph4 = document.createElement('p');
+        paragraph4.textContent = posts[i].acf.date_of_post;
+        paragraph4.classList.add("date-post");
+        contentWrapper.append(paragraph4);
+
         /*const paragraph1 = document.createElement('p');
         paragraph1.textContent = posts[i].acf.blog_p1;
         element.append(paragraph1);
@@ -49,7 +54,9 @@ export function renderBlog(posts){
         const paragraph3 = document.createElement('p');
         paragraph3.textContent = posts[i].acf.blog_p3;
         element.append(paragraph3); */
+        
 
+       
 
         const btn = document.createElement("a");
         btn.href = "/post/" + "?id=" + posts[i].id;
@@ -58,7 +65,8 @@ export function renderBlog(posts){
         contentWrapper.append(btn);
 
         element.append(contentWrapper);
-
+        
+        
         
         parent.append(element);
     }
