@@ -8,6 +8,7 @@
 .carousel-container {
     position: relative;
     padding: 20px;
+    margin-bottom: 30px;
 }
 
 .arrow {
@@ -17,12 +18,13 @@
     transform: translateY(-50%);
     font-size: 24px;
     user-select: none;
-    z-index: 2;
+    z-index: 10;
 }
 
 .left-arrow {
     left: 0;
     padding: var(--padding-10);
+    
     
 }
 
@@ -34,17 +36,23 @@
 .carousel-item {
     display: none; 
     margin-right: 20px;
-    
+    height: 100%;
+
 }
+
+
 
 
 @media (min-width: 900px) {
     .carousel-container .carousel-item {
         display: none; /* Reset to hide all */
+        transition: transform 0.7s ease;
     }
-    .carousel-container .carousel-item.active,
-    .carousel-container .carousel-item.active + .carousel-item {
+    
+    .carousel-container .carousel-item.active {
         display: block; /* Show two items */
+        transform: scale(1.1); /* Scale up the active item */
+        z-index: 2; /* Ensure the scaled item overlaps adjacent items if necessary */
     }
 
    
@@ -54,10 +62,18 @@
 @media (min-width: 1200px) {
     .carousel-container .carousel-item {
         display: none; /* Reset to hide all */
+        transition: transform 0.7s ease;
+        
+       
     }
-    .carousel-container .carousel-item.active,
-    .carousel-container .carousel-item.active + .carousel-item,
-    .carousel-container .carousel-item.active + .carousel-item + .carousel-item {
+    .carousel-container .carousel-item.active {
         display: block; /* Show three items */
+        
+            transform: scale(1.1); /* Scale up the active item */
+            z-index: 2; /* Ensure the scaled item overlaps adjacent items if necessary */
+            
     }
+
+   
 }
+

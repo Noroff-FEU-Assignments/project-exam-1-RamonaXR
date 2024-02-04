@@ -37,6 +37,7 @@ header {
 /* Posts */ 
 
 @media (min-width: 630px) {
+    
     .posts { /* Fill the page better on bigger screens*/
     flex: 1 1 calc(50% - 40px); 
     max-width: calc(50% - 40px);

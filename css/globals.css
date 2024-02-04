@@ -25,7 +25,7 @@ body {
   font-size: var(--size16);
   font-weight: var(--weight400);
   line-height: var(--lineheight);
-  background: var(--white100);
+  background: var(--white);
   color: var(--black);
   height: 100vh;
   padding: 0;

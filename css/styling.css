@@ -71,7 +71,6 @@ button,
 .posts img, 
 .posts h2,
 .posts h3,
-.posts-carousel a, 
 .posts-carousel img, 
 .posts-carousel h2,
 .posts-carousel h3  {
@@ -110,7 +109,7 @@ button,
     flex-direction: column;
     background-color: var(--post-color);
     box-shadow: var(--boxshadow);
-    border-radius: var(--border-radius);
+    
     overflow: hidden; 
     max-width: 340px; 
     text-align: center;
@@ -148,6 +147,7 @@ button,
     flex-direction: column;
     justify-content: space-between;
     flex: 1; 
+    min-height: 200px;
 }
 
 .button-blog {

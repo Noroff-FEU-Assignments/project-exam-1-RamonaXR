@@ -102,6 +102,8 @@ export function renderHome(posts) {
 
     let currentIndex = 0;
 
+    
+
     // Function to create and return a post element
     function createPostElement(post) {
         const element = document.createElement("article");
@@ -163,12 +165,15 @@ export function renderHome(posts) {
         }
         return 1; 
     }
+    // Functioning carousel 
 
+    /*
     // Update active items based on screen width
     function updateActiveItems() {
         const visibleItemCount = getVisibleItemsCount();
         const items = document.querySelectorAll(".carousel-item");
         items.forEach(item => item.style.display = 'none'); 
+        
 
         for (let i = 0; i < visibleItemCount; i++) {
             const index = (currentIndex + i) % items.length; 
@@ -176,7 +181,41 @@ export function renderHome(posts) {
                 items[index].style.display = 'block'; 
             }
         }
+    }  */
+
+     // Try 2 
+
+    
+    function updateActiveItems() {
+        const visibleItemCount = getVisibleItemsCount();
+        const items = document.querySelectorAll(".carousel-item");
+        // First, hide all items and remove the 'active' class
+        items.forEach(item => {
+            item.style.display = 'none'; 
+            item.classList.remove("active");
+        });
+    
+        // Then, for the visible items...
+        for (let i = 0; i < visibleItemCount; i++) {
+            const index = (currentIndex + i) % items.length; 
+            if (items[index]) {
+                items[index].style.display = 'block'; // Make item visible
+                // Additionally, if we're displaying more than one item, make the first one "pop out"
+                if (visibleItemCount === 3 && i === 1) { // Middle post pops out when 3 posts are displayed
+                    items[index].classList.add("active");
+                } else if (visibleItemCount === 2 && i === 0) { // For 2 posts, choose to pop the first or second
+                    // Optionally, for 2 posts, you could choose to pop the second by changing i === 0 to i === 1
+                    items[(currentIndex + 1) % items.length].classList.add("active");
+                }
+            }
+        }
     }
+
+
+
+
+    
+    
 
     // Adjust carousel position based on direction
     function moveCarousel(direction) {
@@ -199,6 +238,8 @@ export function renderHome(posts) {
 
     // Listen for window resize 
     window.addEventListener('resize', updateActiveItems);
+
+
 }
 
 
