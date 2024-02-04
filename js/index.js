@@ -8,8 +8,9 @@ import { createHome } from "./pages/home.js";
 
 
 
-toggleMenu()
 
+
+toggleMenu();
 
 switch (window.location.pathname){
     case "/about/":
@@ -27,6 +28,7 @@ switch (window.location.pathname){
     case "/":
     case "/index.html":
         createHome();
+        
         
         
         

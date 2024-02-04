@@ -4,6 +4,7 @@ import { renderBlog } from "../rendering/renderBlog.js";
 
 const parent = document.querySelector(".blogposts") 
 
+// Blog page 
 export async function createBlog(){
     try {
         const posts = await fetchData(url);

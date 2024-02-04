@@ -6,5 +6,5 @@ export async function fetchData(url){
     return result; 
     
 }
-
+// Error handling
 

@@ -1,9 +1,9 @@
-import { renderHome } from "../rendering/renderHome.js";
+import { renderHome } from "../rendering/renderHomeCarousel.js";
 import { url } from "../data/constants.js";
 import { fetchData } from "../data/fetchApi.js";
 
 
-
+// Create homepage
 
 
 const parent = document.querySelector(".carousel-container") 
@@ -14,7 +14,7 @@ export async function createHome(){
         parent.innerHTML = "";
         renderHome(posts);
     } catch (error) {
-        console.log(error);
+        console.log(error); // Add error! 
         
     }
 }

@@ -7,11 +7,13 @@ export function renderBlog(posts){
     const parent = document.querySelector(".blogposts");
 
     
+    // Loop for all posts 
 
     for (let i = 0; i < posts.length; i++){
         const element = document.createElement("article");
         element.classList.add("posts");
-
+    
+    // Need a wrapper for styling
         const imageWrapper = document.createElement("div"); 
         imageWrapper.classList.add("image-wrapper");
     
@@ -26,10 +28,10 @@ export function renderBlog(posts){
         image.setAttribute("alt", posts[i].acf.alt_text); // REMEMBER ADDING ALT
         image.classList.add("posts-img");
         imageWrapper.append(image); 
-
+        
         element.append(imageWrapper);
         
-        
+    // Need a wrapper here too for styling
         const contentWrapper = document.createElement("div"); 
         contentWrapper.classList.add("content-wrapper");
 

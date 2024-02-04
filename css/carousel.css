@@ -23,6 +23,7 @@
 .left-arrow {
     left: 0;
     padding: var(--padding-10);
+    
 }
 
 .right-arrow {
@@ -32,4 +33,31 @@
 
 .carousel-item {
     display: none; 
+    margin-right: 20px;
+    
+}
+
+
+@media (min-width: 900px) {
+    .carousel-container .carousel-item {
+        display: none; /* Reset to hide all */
+    }
+    .carousel-container .carousel-item.active,
+    .carousel-container .carousel-item.active + .carousel-item {
+        display: block; /* Show two items */
+    }
+
+   
+}
+
+/* For screens wider than 1200px, show 3 items */
+@media (min-width: 1200px) {
+    .carousel-container .carousel-item {
+        display: none; /* Reset to hide all */
+    }
+    .carousel-container .carousel-item.active,
+    .carousel-container .carousel-item.active + .carousel-item,
+    .carousel-container .carousel-item.active + .carousel-item + .carousel-item {
+        display: block; /* Show three items */
+    }
 }
