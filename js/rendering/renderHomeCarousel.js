@@ -135,7 +135,7 @@ export function renderHome(posts) {
     // Listen for window resize 
     window.addEventListener('resize', updateActiveItems);
 
-
+    updateActiveItems();
 }
 
 
