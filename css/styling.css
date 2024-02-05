@@ -219,6 +219,80 @@ button,
 /* Home */ 
 
 
+/* Contact*/
+
+.contact-section {
+    padding: 20px;
+
+}
+
+.contact-section img {
+    width: 80%; 
+    max-width: 350px; 
+    height: auto; 
+}
+
+.invalid {
+    border: 2px solid red;
+}
+
+.contact-form {
+    width: 90%; 
+    max-width: 350px; 
+}
+
+
+.successMessage {
+    display: none;
+    background-color: rgb(178, 219, 178);
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    width: 300px;
+}
+
+.close-button {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    cursor: pointer;
+}
+
+.contact-form, .successMessage {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.h1-contact {
+    margin-bottom: 20px;
+}
+
+.form-section h2,
+.form-section p {
+    text-align: center;
+    padding: 15px;
+    
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+}
+
+
 
 
 /* Footer */

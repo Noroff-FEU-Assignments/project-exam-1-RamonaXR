@@ -1,7 +1,7 @@
 
 
 
-// Try desktop 
+// Carousel at homepage
 
 
 export function renderHome(posts) {

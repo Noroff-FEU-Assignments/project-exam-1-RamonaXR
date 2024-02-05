@@ -14,37 +14,69 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Island+Moments&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a2089e7094.js" crossorigin="anonymous"></script>
-    <script defer type="module" src="./js/index.js"></script>
+    <script defer type="module" src="/js/index.js"></script>
 </head>
-<body>
-    <header>
-
-    </header>
+<body class="flex flex-column">
+    <div class="overlay hide"></div>
+    <header class="flex align-items-center">
+        <a href="#" class="logo-header">LOGO</a>
+        <div class="flex justify-end hamburger-container">
+          <div class="hamburger-wrap">
+            <i class="fa-solid fa-bars fa-xl"></i>
+          </div>
+        </div>
+        <nav class="navigation">
+          <div class="flex justify-center align-items-center closing-btn"><i class="fa-solid fa-xmark fa-lg"></i></div>
+          <ul class="flex">
+            <li class="links-header"><a href="/blog/">Blog</a></li>
+            <li class="links-header"><a href="/about/">About</a></li>
+            <li class="links-header"><a href="/contact/">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
     <main>
-        <a href="/blog/">Back to posts</a>
-        <h1>Contact</h1>
-        <h2>Any questions? Anything content you are missing? Please feel free to get in touch</h2>
-        <form action="/submit-contact-form" method="post">
+        
+            <div class="button-back flex justify-start">
+                <a class="button" href="/blog/">Back to posts</a>
+            </div>
+        <h1 class="h1-contact flex justify-center">Contact</h1>
+        <div class="contact-section flex flex-column align-items-center">
+        <img src="/Compressed images EX1/jess-bailey-q10VITrVYUM-unsplash.jpg" alt="Concact-image with notebook and glasses">
+        <div class="form-section">
+            <h2>Any questions? Anything content you are missing?</h2>
+            <p>Please feel free to get in touch!</p>
+        <form class="contact-form" action="/submit-contact-form" method="post">
             <div>
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name" required placeholder="Enter your name (more than 5 characters)">
+                <span class="error-message" id="name-error"></span>
             </div>
             <div>
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" required placeholder="Enter your email address">
+                <span class="error-message" id="email-error"></span>
             </div>
             <div>
                 <label for="subject">Subject:</label>
-                <input type="text" id="subject" name="subject">
+                <input type="text" id="subject" name="subject" required placeholder="Enter the subject (more than 15 characters)">
+                <span class="error-message" id="subject-error"></span>
             </div>
             <div>
                 <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
+                <textarea id="message" name="message" required placeholder="Enter your message (more than 25 characters)"></textarea>
+                <span class="error-message" id="message-error"></span>
             </div>
-            <div>
-                <button type="submit">Send Message</button>
+            <div class="flex justify-center">
+                <button class="button" type="submit">Send Message</button>
             </div>
         </form>
+    </div>
+        <div class="successMessage">
+            <span class="close-button">X</span>
+            <p>Message sent! I'll get back to you as soon as I can.</p>
+        </div>
+    </div>
+        </body>
     </main>
     <footer>
         <p class="flex justify-center p-footer">©Beauty By Ramona</p>
