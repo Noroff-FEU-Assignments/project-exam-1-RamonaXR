@@ -54,7 +54,12 @@ nav a:focus {
     color: #652046; 
 }
 
-
+.logo-header{
+    font-size: var(--size48);
+    display: inline-block; 
+    white-space: nowrap;
+    
+}
 }
 /* Posts */ 
 

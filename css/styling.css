@@ -2,10 +2,17 @@
 /* Header */
 
 header {
-    height: 90px;
+    height: 80px;
     position: relative;
 }
 
+.logo-header{
+    font-family: var(--island);
+    font-size: var(--size36);
+    display: inline-block; 
+    white-space: nowrap;
+    color: rgb(44, 39, 39);
+}
 /* Nav */ 
 
 nav {
@@ -114,7 +121,6 @@ button:hover,
     flex-direction: column;
     background-color: var(--post-color);
     box-shadow: var(--boxshadow);
-    
     overflow: hidden; 
     max-width: 340px; 
     text-align: center;
