@@ -40,7 +40,7 @@ nav li::after {
     left: 0;
     width: 0%; 
     height: 2px; 
-    background-color: #007bff; 
+    background-color: #53203e; 
     transition: width 0.3s ease; 
 }
 
