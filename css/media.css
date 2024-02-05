@@ -33,6 +33,26 @@ header {
     display: none;
 }
 
+nav li::after {
+    content: ''; 
+    position: absolute;
+    bottom: 0; 
+    left: 0;
+    width: 0%; 
+    height: 2px; 
+    background-color: #007bff; 
+    transition: width 0.3s ease; 
+}
+
+nav li:hover::after,
+nav li:focus-within::after {
+    width: 100%; 
+}
+
+nav a:hover,
+nav a:focus {
+    color: #0056b3; 
+}
 
 
 }
