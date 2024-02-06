@@ -244,25 +244,12 @@ button:hover,
 
 /* Contact*/
 
-.contact-section {
-    padding: 20px;
 
-}
-
-.contact-section img {
-    width: 80%; 
-    max-width: 350px; 
-    height: auto; 
-}
 
 .invalid {
     border: 2px solid red;
 }
 
-.contact-form {
-    width: 90%; 
-    max-width: 350px; 
-}
 
 
 .successMessage {
@@ -284,19 +271,23 @@ button:hover,
     cursor: pointer;
 }
 
-.contact-form, .successMessage {
+.successMessage {
     max-width: 400px;
     margin: auto;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-input[type="text"], input[type="email"], textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%; 
+  padding: 10px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; 
 }
 
 .h1-contact {
@@ -304,7 +295,9 @@ input[type="text"], input[type="email"], textarea {
 }
 
 .form-section h2,
-.form-section p {
+.form-section p,
+.contact-h2,
+.contact-p {
     text-align: center;
     padding: 15px;
     
@@ -317,6 +310,34 @@ input[type="text"], input[type="email"], textarea {
 
 
 
+.contact-section, 
+.form-section {
+    width: 100%; 
+}
+
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.contact-form {
+    width: 100%; 
+    max-width: 350px; 
+    margin: 0 auto; 
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+    border-radius: 8px; 
+    background: #fff; 
+}
+
+.contact-section img {
+    width: 80%; 
+    max-width: 350px;
+    height: auto; 
+    margin-bottom: 20px; 
+}
 
 /* Footer */
 
