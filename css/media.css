@@ -26,7 +26,7 @@ header {
 }
 
 .links-header a {
-    font-size: var(--size48);
+    font-size: var(--size36);
 }
 
 .closing-btn,
