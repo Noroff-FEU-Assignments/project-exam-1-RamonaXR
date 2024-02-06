@@ -9,6 +9,7 @@
     position: relative;
     padding: 20px;
     margin-bottom: 30px;
+    
 }
 
 .arrow {
@@ -16,7 +17,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 24px;
+    font-size: 18px;
     user-select: none;
     z-index: 3;
 }
@@ -33,6 +34,10 @@
     padding: var(--padding-10);
 }
 
+
+
+
+
 .carousel-item {
     display: none; 
     margin-right: 20px;
@@ -40,18 +45,57 @@
 
 }
 
+/*Self love carousel*/
+
+.love-container {
+    position: relative;
+    max-width: 350px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.love-carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.love-carousel-item {
+    min-width: 100%; 
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+
+.prev, .next {
+    position: relative; 
+    margin-top: 10px; 
+    background-color: #595050;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 100px; 
+}
+
+
+
+.button-container {
+    gap: 15px; 
+    padding: 10px 0; 
+
+}
 
 
 
 @media (min-width: 900px) {
     .carousel-container .carousel-item {
-        display: none; /* Reset to hide all */
+        display: none; 
         transition: transform 0.7s ease;
     }
     
     .carousel-container .carousel-item.active {
-        display: block; /* Show two items */
-        transform: scale(1.1); /* Scale up the active item */
+        display: block; 
+        transform: scale(1.1); 
         z-index: 2; 
     }
 

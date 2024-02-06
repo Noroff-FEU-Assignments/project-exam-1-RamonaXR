@@ -19,7 +19,9 @@ h1,
     font-size: var(--size32);
 }   
 
-
+.h2-home {
+    font-size: var(--size24);
+}
 
 .links-header a {
     font-size: var(--size32);

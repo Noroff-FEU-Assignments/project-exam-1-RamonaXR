@@ -215,8 +215,11 @@ button:hover,
     
 }
 
-.hero h1 {
+.hero-h1 {
     padding: 20px;
+    font-family: var(--island);
+    font-weight: var(--weight400);
+    color: rgb(78, 69, 69);
 }
 
 .under-hero {
@@ -321,19 +324,23 @@ input[type="text"], input[type="email"], textarea {
 .p-footer,
 header a,
 .hamburger-container,
-footer a {
+footer a,
+.hero-h2,
+.hero-p {
     padding: var(--padding-10);
 } 
 
 
-.hero h1 {
-    padding: 20px;
-}
 
 .img-hero {
   border-radius: 50%;
   height: 150px;
   width: 150px;
+  object-fit: contain;
+}
+
+footer {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 

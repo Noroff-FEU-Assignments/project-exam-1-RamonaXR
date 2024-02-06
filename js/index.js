@@ -4,6 +4,7 @@ import { createBlog } from "./pages/blog.js";
 import { createPost } from "./pages/post.js";
 import { createHome } from "./pages/home.js";
 import { validateContactForm } from "./contact/contact.js";
+import { initializeLoveCarousel } from "./carousel/carousel.js";
 
 
 
@@ -33,8 +34,6 @@ switch (window.location.pathname){
     case "/index.html":
         createHome();
         toggleMenu();
-        
-        
-        
+        initializeLoveCarousel();
         
 }

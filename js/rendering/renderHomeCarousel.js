@@ -10,11 +10,11 @@ export function renderHome(posts) {
     let currentIndex = 0;
 
     // Create left and right arrows outside populateCarousel to maintain their event listeners
-    const leftArrow = document.createElement("div");
+    const leftArrow = document.createElement("button");
     leftArrow.classList.add("arrow", "left-arrow");
     leftArrow.innerHTML = "&#9664;";
 
-    const rightArrow = document.createElement("div");
+    const rightArrow = document.createElement("button");
     rightArrow.classList.add("arrow", "right-arrow");
     rightArrow.innerHTML = "&#9654;";
 
