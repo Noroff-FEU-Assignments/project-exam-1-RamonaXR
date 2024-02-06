@@ -3,7 +3,10 @@
 
 header {
     height: 80px;
-    position: relative;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 6;
+    width: 100%;
+    position: sticky;
 }
 
 .logo-header{
@@ -16,7 +19,7 @@ header {
 /* Nav */ 
 
 nav {
-    position: absolute;
+    position: fixed;
     height: 100vh;
     width: 150px;
     top: 0px;
@@ -25,6 +28,8 @@ nav {
     right: -150px;
     padding: 20px 0 0 0;
     display: none;
+    
+    
 }
 
 nav ul {
@@ -210,6 +215,10 @@ button:hover,
     
 }
 
+.hero h1 {
+    padding: 20px;
+}
+
 .under-hero {
     font-size: var(--size32);
 }
@@ -217,7 +226,7 @@ button:hover,
 /* Overlay */
 
 .overlay {
-    position: absolute;
+    position: fixed;
     top: 0px;
     left: 0px;
     height: 100%;
@@ -321,6 +330,11 @@ footer a {
     padding: 20px;
 }
 
+.img-hero {
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+}
 
 
 

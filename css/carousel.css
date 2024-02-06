@@ -18,7 +18,7 @@
     transform: translateY(-50%);
     font-size: 24px;
     user-select: none;
-    z-index: 10;
+    z-index: 3;
 }
 
 .left-arrow {
@@ -52,11 +52,13 @@
     .carousel-container .carousel-item.active {
         display: block; /* Show two items */
         transform: scale(1.1); /* Scale up the active item */
-        z-index: 2; /* Ensure the scaled item overlaps adjacent items if necessary */
+        z-index: 2; 
     }
 
    
 }
+
+
 
 /* For screens wider than 1200px, show 3 items */
 @media (min-width: 1200px) {
@@ -70,7 +72,7 @@
         display: block; /* Show three items */
         
             transform: scale(1.1); /* Scale up the active item */
-            z-index: 2; /* Ensure the scaled item overlaps adjacent items if necessary */
+            z-index: 2; 
             
     }
 

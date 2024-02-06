@@ -12,6 +12,8 @@ export function renderBlog(posts){
     for (let i = 0; i < posts.length; i++){
         const element = document.createElement("article");
         element.classList.add("posts");
+
+       
     
     // Need a wrapper for styling
         const imageWrapper = document.createElement("div"); 
@@ -71,6 +73,8 @@ export function renderBlog(posts){
         
         
         parent.append(element);
+
+        
     }
 } 
 

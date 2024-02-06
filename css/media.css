@@ -6,6 +6,7 @@
 header {
     padding: 30px;
     height: auto;
+    
 }
 
 .navigation {
@@ -66,11 +67,20 @@ nav a:focus {
 @media (min-width: 630px) {
     
     .posts { /* Fill the page better on bigger screens*/
-    flex: 1 1 calc(50% - 40px); 
-    max-width: calc(50% - 40px);
+    flex: 1 1 calc(50% - 20px); 
+    max-width: calc(50% - 20px);
 
 }
+
 }
+
+@media (min-width: 900px) {
+    .posts {
+        flex: 1 1 calc(33.333% - 20px); 
+        max-width: calc(33.333% - 20px);
+    }
+}
+
 
 
 /* Contact */ 
