@@ -69,15 +69,21 @@
                 <textarea id="message" name="message" required placeholder="Enter your message (more than 25 characters)"></textarea>
                 <span class="error-message" id="message-error"></span>
             </div>
+            <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f91-p92-o1"  />
+
             <div class="flex justify-center">
                 <button class="button" type="submit">Send Message</button>
             </div>
         </form>
     </div>
         <div class="successMessage">
-            <span class="close-button">X</span>
+            <button class="close-button">X</button>
             <p>Message sent! I'll get back to you as soon as I can.</p>
         </div>
+        <div class="errorMessage">
+            <button class="close-button">X</button>
+            Please correct the errors and try again.
+          </div>
     </div>
         </body>
     </main>

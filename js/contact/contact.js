@@ -1,5 +1,7 @@
 // Contact form
 
+import { submitContactForm } from "./contactPOST.js";
+
 export function validateContactForm() {
 const contactForm = document.querySelector(".contact-form");
 const successMessage = document.querySelector(".successMessage");
@@ -72,9 +74,27 @@ let isValid =
     !messageInput.classList.contains("invalid");
 
     if (isValid) {
+
+        const formData = new FormData(contactForm);
+
+        // Dynamically retrieve and include the _wpcf7_unit_tag if necessary
+        const unitTagInput = contactForm.querySelector("input[name='_wpcf7_unit_tag']");
+        if (unitTagInput) {
+            formData.append('_wpcf7_unit_tag', unitTagInput.value);
+        } else {
+            console.warn("Could not find the _wpcf7_unit_tag in the form.");
+            
+        }
+
+        // Call the submit function imported from contactPOST.js
+        submitContactForm(formData);
+
+
+
     successMessage.style.display = "block";
     contactForm.reset();
     }
+
 });
 
 // Close button event listener
