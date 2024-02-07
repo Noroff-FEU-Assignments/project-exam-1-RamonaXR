@@ -1,3 +1,7 @@
+
+// Another carousel also on homepage 
+
+
 export function initializeLoveCarousel() {
     let currentSlide = 0;
 

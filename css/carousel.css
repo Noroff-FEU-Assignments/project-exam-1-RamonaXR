@@ -18,15 +18,15 @@
     top: 50%;
     transform: translateY(-50%);
     font-size: 18px;
-    user-select: none;
     z-index: 3;
+
+    -webkit-appearance: none; /* Had to add this, because iphone was adding arrow*/
+    appearance: none;
 }
 
 .left-arrow {
-    left: 0;
+    left: 0; 
     padding: var(--padding-10);
-    
-    
 }
 
 .right-arrow {
@@ -40,7 +40,7 @@
 
 .carousel-item {
     display: none; 
-    margin-right: 20px;
+    
     height: 100%;
 
 }
