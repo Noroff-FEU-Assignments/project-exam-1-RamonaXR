@@ -61,6 +61,9 @@ nav a:focus {
     white-space: nowrap;
     
 }
+
+
+
 }
 /* Posts */ 
 
@@ -79,7 +82,12 @@ nav a:focus {
         flex: 1 1 calc(33.333% - 20px); 
         max-width: calc(33.333% - 20px);
     }
+    
+    .modal-content {
+    max-width: 600px;
 }
+}
+
 
 
 

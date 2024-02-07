@@ -9,7 +9,7 @@
     position: relative;
     padding: 20px;
     margin-bottom: 30px;
-    
+    gap: 30px;
 }
 
 .arrow {
@@ -17,17 +17,12 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 18px;
     z-index: 3;
+    
 
-    -webkit-appearance: none; /* Had to add this, because iphone was adding arrow*/
-    appearance: none;
 }
 
-.arrow::before,
-.arrow::after {
-    content: none;
-}
+
 
 .left-arrow {
     left: 0; 
@@ -71,7 +66,7 @@
     text-align: center;
 }
 
-
+/*
 .prev, .next {
     position: relative; 
     margin-top: 10px; 
@@ -80,7 +75,7 @@
     padding: 10px;
     cursor: pointer;
     width: 100px; 
-}
+}*/
 
 
 

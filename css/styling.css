@@ -68,6 +68,7 @@ button,
   align-self: center;
   margin-top: 20px;
   margin-bottom: 20px;
+  cursor: pointer;
 }
 
 button:hover, 
@@ -153,7 +154,7 @@ button:hover,
 
 
 .h2-posts {
-    font-weight: var(--weight600);
+    font-weight: var(--weight400);
     font-size: var(--size24);
 }
 

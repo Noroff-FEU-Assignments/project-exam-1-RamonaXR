@@ -12,11 +12,11 @@ export function renderHome(posts) {
     // Create left and right arrows outside populateCarousel to maintain their event listeners
     const leftArrow = document.createElement("button");
     leftArrow.classList.add("arrow", "left-arrow");
-    leftArrow.innerHTML = "&#9664;";
+    leftArrow.textContent = "Prev"; 
 
     const rightArrow = document.createElement("button");
     rightArrow.classList.add("arrow", "right-arrow");
-    rightArrow.innerHTML = "&#9654;";
+    rightArrow.textContent = "Next"; 
 
     function populateCarousel() {
         // Clear existing content except arrows
@@ -37,6 +37,8 @@ export function renderHome(posts) {
         parent.append(rightArrow);
         updateActiveItems();
     }
+
+    
     
 
     // Rendering content 
@@ -78,7 +80,10 @@ export function renderHome(posts) {
         element.append(contentWrapper);
 
         return element;
-    }
+    } 
+
+
+    
 
     function updateActiveItems() {
         const visibleItemCount = getVisibleItemsCount();
