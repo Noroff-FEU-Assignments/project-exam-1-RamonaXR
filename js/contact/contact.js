@@ -9,7 +9,7 @@ const closeButton = document.querySelector(".close-button");
 const nameInput = document.getElementById("name");
 const nameError = document.getElementById("name-error");
 
-nameInput.addEventListener("input", function () {
+nameInput.addEventListener("blur", function () {
     if (nameInput.value.length < 5) {
         nameInput.classList.add("invalid");
         nameError.textContent = "Name should be more than 5 characters long.";
@@ -23,7 +23,7 @@ nameInput.addEventListener("input", function () {
 const emailInput = document.getElementById("email");
 const emailError = document.getElementById("email-error");
 const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-    emailInput.addEventListener("input", function () {
+    emailInput.addEventListener("blur", function () {
     if (!emailRegex.test(emailInput.value)) {
     emailInput.classList.add("invalid");
     emailError.textContent = "Please enter a valid email address.";
@@ -36,7 +36,7 @@ const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 // Real-time validation for Subject
 const subjectInput = document.getElementById("subject");
 const subjectError = document.getElementById("subject-error");
-subjectInput.addEventListener("input", function () {
+subjectInput.addEventListener("blur", function () {
     if (subjectInput.value.length < 15) {
     subjectInput.classList.add("invalid");
     subjectError.textContent =
@@ -50,7 +50,7 @@ subjectInput.addEventListener("input", function () {
 // Real-time validation for Message
 const messageInput = document.getElementById("message");
 const messageError = document.getElementById("message-error");
-    messageInput.addEventListener("input", function () {
+    messageInput.addEventListener("blur", function () {
     if (messageInput.value.length < 25) {
     messageInput.classList.add("invalid");
     messageError.textContent =

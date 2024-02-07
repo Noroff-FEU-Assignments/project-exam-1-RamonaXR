@@ -5,12 +5,27 @@ export function renderPost(post){
     console.log(post);
 
     const parent = document.querySelector(".post");
-
-    while (parent.firstChild) {
-        parent.removeChild(parent.firstChild);
-    }
-
-    
+    parent.innerHTML = "";
+     // Modal setup
+     const modal = document.createElement("div");
+     modal.classList.add("modal");
+ 
+     const modalContent = document.createElement("img");
+     modalContent.classList.add("modal-content");
+     modal.append(modalContent);
+ 
+     const closeModal = document.createElement("span");
+     closeModal.classList.add("close-modal");
+     closeModal.textContent = "×";
+     modal.append(closeModal);
+ 
+     document.body.append(modal); // Append modal to body 
+ 
+     // Close modal 
+     closeModal.onclick = function() {
+         modal.style.display = "none";
+     }
+ 
 
         const element = document.createElement("article");
         element.classList.add("post");
@@ -21,10 +36,19 @@ export function renderPost(post){
         element.append(title);
         
 
+        
         const image = document.createElement("img");
         image.src = post.acf.blog_image;
-        image.setAttribute("alt", post.acf.alt_text); // REMEMBER ADDING ALT
+        image.setAttribute("alt", post.acf.alt_text);
         image.classList.add("posts-img");
+        
+
+        // Image click event to open modal
+        image.onclick = function() {
+            modal.style.display = "flex";
+            modalContent.src = this.src; 
+        }
+
         element.append(image);
 
         const heading = document.createElement("h2");
@@ -53,5 +77,13 @@ export function renderPost(post){
 
 
         parent.append(element);
+
+    // Close modal on outside click
+    // Had to add touchstart- because tap outside did not work on mobile.
+    window.addEventListener('touchstart', function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }, false);
     }
 

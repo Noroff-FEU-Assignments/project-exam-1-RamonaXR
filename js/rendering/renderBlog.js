@@ -122,6 +122,7 @@ export function renderBlog(posts) {
         image.src = posts[i].acf.blog_image;
         image.setAttribute("alt", posts[i].acf.alt_text);
         image.classList.add("posts-img");
+        
 
         // Image click event to open modal
         image.onclick = function() {
@@ -175,12 +176,7 @@ export function renderBlog(posts) {
     }
 
     // Close modal on outside click
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-
+    // Had to add touchstart- because tap outside did not work on mobile.
     window.addEventListener('touchstart', function(event) {
         if (event.target == modal) {
             modal.style.display = "none";
