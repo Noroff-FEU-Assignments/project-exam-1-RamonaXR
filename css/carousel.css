@@ -24,6 +24,11 @@
     appearance: none;
 }
 
+.arrow::before,
+.arrow::after {
+    content: none;
+}
+
 .left-arrow {
     left: 0; 
     padding: var(--padding-10);
