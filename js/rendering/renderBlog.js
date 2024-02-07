@@ -180,5 +180,11 @@ export function renderBlog(posts) {
             modal.style.display = "none";
         }
     }
+
+    window.addEventListener('touchstart', function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }, false);
 }
 
