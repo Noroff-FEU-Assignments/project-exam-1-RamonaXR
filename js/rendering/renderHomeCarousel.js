@@ -71,6 +71,11 @@ export function renderHome(posts) {
         heading.classList.add("h3-posts");
         contentWrapper.append(heading);
 
+        const paragraph4 = document.createElement('p');
+        paragraph4.textContent = post.acf.date_of_post;
+        paragraph4.classList.add("date-post");
+        element.append(paragraph4);
+
         const btn = document.createElement("a");
         btn.href = "/post/" + "?id=" + post.id;
         btn.classList.add("button");

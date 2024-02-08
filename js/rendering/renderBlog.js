@@ -113,10 +113,19 @@ export function renderBlog(posts) {
         const imageWrapper = document.createElement("div");
         imageWrapper.classList.add("image-wrapper");
 
+        const titleLink = document.createElement("a");
+        titleLink.href = "/post/?id=" + posts[i].id; 
+        titleLink.classList.add("post-title-link");
+
         const title = document.createElement("h2");
         title.textContent = posts[i].acf.blog_title;
         title.classList.add("h2-posts");
-        element.append(title);
+        
+        
+        titleLink.append(title);
+        element.append(titleLink);
+
+        
 
         const image = document.createElement("img");
         image.src = posts[i].acf.blog_image;
@@ -178,6 +187,12 @@ export function renderBlog(posts) {
     // Close modal on outside click
     // Had to add touchstart- because tap outside did not work on mobile.
     window.addEventListener('touchstart', function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }, false);
+
+    window.addEventListener('click',  function(event) {
         if (event.target == modal) {
             modal.style.display = "none";
         }
