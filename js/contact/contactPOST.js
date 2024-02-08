@@ -1,6 +1,8 @@
 
 // POSTing the contact form
 
+
+
 export function submitContactForm(formData) {
     const url = "https://exam1.ramonaelise.one/wp-json/contact-form-7/v1/contact-forms/92/feedback"; 
 
@@ -23,3 +25,8 @@ export function submitContactForm(formData) {
         // Handle errors
     });
 }
+
+
+
+
+

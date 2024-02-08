@@ -6,6 +6,7 @@ export function validateContactForm() {
 const contactForm = document.querySelector(".contact-form");
 const successMessage = document.querySelector(".successMessage");
 const closeButton = document.querySelector(".close-button");
+const errorMessage = document.querySelector(".errorMessage");
 
 // Real-time validation for Name
 const nameInput = document.getElementById("name");
@@ -77,21 +78,24 @@ let isValid =
 
         const formData = new FormData(contactForm);
 
-        // Dynamically retrieve and include the _wpcf7_unit_tag if necessary
+        // Need to add the unity tag, because contact 7 was not letting me post with out it. 
         const unitTagInput = contactForm.querySelector("input[name='_wpcf7_unit_tag']");
         if (unitTagInput) {
             formData.append('_wpcf7_unit_tag', unitTagInput.value);
         } else {
             console.warn("Could not find the _wpcf7_unit_tag in the form.");
             
-        }
+        } 
 
-        // Call the submit function imported from contactPOST.js
+        
+
+        // Call the submit function 
         submitContactForm(formData);
 
 
-
+// Success message 
     successMessage.style.display = "block";
+    
     contactForm.reset();
     }
 
@@ -100,5 +104,11 @@ let isValid =
 // Close button event listener
 closeButton.addEventListener("click", function () {
 successMessage.style.display = "none";
+
 });
-}
+}  
+
+
+
+
+

@@ -50,10 +50,19 @@ export function renderHome(posts) {
         const imageWrapper = document.createElement("div");
         imageWrapper.classList.add("image-wrapper");
 
+        const titleLink = document.createElement("a");
+        titleLink.href = "/post/?id=" + post.id; 
+        titleLink.classList.add("post-title-link");
+
         const title = document.createElement("h2");
         title.textContent = post.acf.blog_title;
         title.classList.add("h2-posts");
-        element.append(title);
+        
+        
+        titleLink.append(title);
+        element.append(titleLink);
+
+        
 
         const image = document.createElement("img");
         image.src = post.acf.blog_image;
