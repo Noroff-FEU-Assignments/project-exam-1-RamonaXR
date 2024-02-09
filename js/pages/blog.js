@@ -1,5 +1,6 @@
-import { url } from "../data/constants.js";
-import { fetchData } from "../data/fetchApi.js";
+
+import { posts } from "../data/posts.js";
+import { displayMessage } from "../errorhandling/displayMessage.js";
 import { renderBlog } from "../rendering/renderBlog.js";
 
 const parent = document.querySelector(".blogposts") 
@@ -7,10 +8,10 @@ const parent = document.querySelector(".blogposts")
 // Blog page 
 export async function createBlog(){
     try {
-        const posts = await fetchData(url);
         parent.innerHTML = "";
         renderBlog(posts); 
     } catch (error) {
         console.log(error); // ADD BETTER ERROR 
+        displayMessage(error, parent, "error");
     }
 }

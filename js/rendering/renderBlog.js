@@ -61,6 +61,9 @@ export function renderBlog(posts){
         const paragraph3 = document.createElement('p');
         paragraph3.textContent = posts[i].acf.blog_p3;
         element.append(paragraph3); */
+
+import { errorParent } from "../errorhandling/errors.js";
+
         
 
        /*
@@ -82,8 +85,13 @@ export function renderBlog(posts){
 }
 }*/
 
+
+
 export function renderBlog(posts) {
     const parent = document.querySelector(".blogposts");
+    if (!parent) {
+        throw errorParent;
+    }
 
     // Modal setup
     const modal = document.createElement("div");
@@ -182,8 +190,10 @@ export function renderBlog(posts) {
         
 
         parent.append(element);
-    }
+    }                       
 
+
+    
     // Close modal on outside click
     // Had to add touchstart- because tap outside did not work on mobile.
     window.addEventListener('touchstart', function(event) {
@@ -198,4 +208,6 @@ export function renderBlog(posts) {
         }
     }, false);
 }
+
+
 

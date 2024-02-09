@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Island+Moments&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a2089e7094.js" crossorigin="anonymous"></script>
-    <script defer type="module" src="./js/index.js"></script>
+    <script defer type="module" src="/js/index.js"></script>
 </head>
 <body>
     <div class="overlay hide"></div>
@@ -25,7 +25,7 @@
           <i class="fa-solid fa-bars fa-xl"></i>
         </div>
       </div>
-      <nav class="navigation">
+      <nav class="navigation flex flex-column">
         <div class="flex justify-center align-items-center closing-btn"><i class="fa-solid fa-xmark fa-lg"></i></div>
         <ul class="flex">
           <li class="links-header"><a href="/blog/">Blog</a></li>
@@ -35,18 +35,20 @@
       </nav>
     </header>
     <main>
-        <a href="/blog/">Back to posts</a>
-        <h1>About</h1>
+      <div class="button-back flex justify-start">
+        <a class="button" href="/blog/">Back to posts</a>
+    </div>
+        <h1 class="about-h1 flex justify-center">About</h1>
         <h2>About me and why self-care & self-love is a passion of mine</h2>
-        <section>
-            <img src="#" alt="Woman with facemask">
+        <section class="about-section-1">
+            <img src="/Compressed images EX1/s-o-c-i-a-l-c-u-t-Z0_90jVuH4Q-unsplash.jpg" alt="Woman with facemask">
             <h2>About me</h2>
             <p>About me text</p>
         </section>
-        <section>
+        <section class="about-section-2">
             <h2>Self-care & Self-love</h2>
             <p>Self-care text</p>
-            <img src="#" alt="Cup of tea and magazine">
+            <img src="/Compressed images EX1/harper-sunday-OO0JC5Ta7-w-unsplash-2.jpg" alt="Cup of tea and magazine">
         </section>
     </main>
     <footer class="flex flex-column align-items-center">

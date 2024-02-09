@@ -12,11 +12,11 @@ import { initializeLoveCarousel } from "./carousel/carousel.js";
 
 
 
-toggleMenu();
+
 
 switch (window.location.pathname){
     case "/about/":
-        // Code
+        toggleMenu();
         break;
     case "/contact/":
         validateContactForm();

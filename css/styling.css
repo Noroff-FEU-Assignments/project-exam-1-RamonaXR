@@ -260,45 +260,33 @@ button:hover,
 
 
 .successMessage {
-    display: none;
+    
     background-color: rgb(178, 219, 178);
     padding: 10px;
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 999;
+    
+    
+    
+    
     width: 300px;
 }
 
 .errorMessage {
     
-    display: none;
+    
     background-color: rgb(239, 71, 45);
     padding: 10px;
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 999;
+    
     width: 300px;
 }
 
-.close-button {
-    position: absolute;
-    top: 0;
-    background: none;
-    padding: 5px;
-    right: 5px;
-    cursor: pointer;
+.error-message {
+    color: red;
+    font-size: 14px;
 }
 
-.successMessage {
-    max-width: 400px;
-    margin: auto;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
+
+
+
 
 input[type="text"],
 input[type="email"],
@@ -325,10 +313,7 @@ textarea {
     
 }
 
-.error-message {
-    color: red;
-    font-size: 14px;
-}
+
 
 
 

@@ -1,12 +1,12 @@
 // Contact form
 
+import { displayMessage } from "../errorhandling/displayMessage.js";
 import { submitContactForm } from "./contactPOST.js";
 
 export function validateContactForm() {
 const contactForm = document.querySelector(".contact-form");
-const successMessage = document.querySelector(".successMessage");
-const closeButton = document.querySelector(".close-button");
-const errorMessage = document.querySelector(".errorMessage");
+const parentContainer = document.querySelector(".messageContainer");
+console.log(parentContainer);
 
 // Real-time validation for Name
 const nameInput = document.getElementById("name");
@@ -64,6 +64,7 @@ const messageError = document.getElementById("message-error");
     }
 });
 
+
 // Submit event listener
 contactForm.addEventListener("submit", function (event) {
 event.preventDefault();
@@ -75,37 +76,35 @@ let isValid =
     !messageInput.classList.contains("invalid");
 
     if (isValid) {
-
-        const formData = new FormData(contactForm);
+        parentContainer.innerHTML = "";
+        displayMessage("Your message was sent!", parentContainer, "success");
+    } 
+        /*const formData = new FormData(contactForm);
 
         // Need to add the unity tag, because contact 7 was not letting me post with out it. 
         const unitTagInput = contactForm.querySelector("input[name='_wpcf7_unit_tag']");
         if (unitTagInput) {
             formData.append('_wpcf7_unit_tag', unitTagInput.value);
+            displayMessage("Your message was sent!", parentContainer, "success");
         } else {
             console.warn("Could not find the _wpcf7_unit_tag in the form.");
-            
+            displayMessage("Something went wrong, please try again later!", parentContainer, "error");
         } 
+
 
         
 
         // Call the submit function 
         submitContactForm(formData);
 
-
-// Success message 
-    successMessage.style.display = "block";
     
     contactForm.reset();
-    }
+    } */
+    
 
 });
 
-// Close button event listener
-closeButton.addEventListener("click", function () {
-successMessage.style.display = "none";
 
-});
 }  
 
 
