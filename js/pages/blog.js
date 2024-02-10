@@ -11,7 +11,7 @@ export async function createBlog(){
         parent.innerHTML = "";
         renderBlog(posts); 
     } catch (error) {
-        console.log(error); // ADD BETTER ERROR 
+        console.log(error); 
         displayMessage(error, parent, "error");
     }
 }

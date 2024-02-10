@@ -66,7 +66,7 @@ const messageError = document.getElementById("message-error");
 
 
 // Submit event listener
-contactForm.addEventListener("submit", function (event) {
+contactForm.addEventListener("submit", async function (event) {
 event.preventDefault();
 
 let isValid =
@@ -74,12 +74,11 @@ let isValid =
     !emailInput.classList.contains("invalid") &&
     !subjectInput.classList.contains("invalid") &&
     !messageInput.classList.contains("invalid");
-
+/*
     if (isValid) {
-        parentContainer.innerHTML = "";
-        displayMessage("Your message was sent!", parentContainer, "success");
-    } 
-        /*const formData = new FormData(contactForm);
+       
+    
+        const formData = new FormData(contactForm);
 
         // Need to add the unity tag, because contact 7 was not letting me post with out it. 
         const unitTagInput = contactForm.querySelector("input[name='_wpcf7_unit_tag']");
@@ -89,9 +88,10 @@ let isValid =
         } else {
             console.warn("Could not find the _wpcf7_unit_tag in the form.");
             displayMessage("Something went wrong, please try again later!", parentContainer, "error");
+            return;
         } 
 
-
+    
         
 
         // Call the submit function 
@@ -99,15 +99,46 @@ let isValid =
 
     
     contactForm.reset();
-    } */
+    
+    
+} 
+});
+} */
+
+if (!isValid) {
+        displayMessage("Please correct the errors before submitting.", contactForm, "error");
+        setTimeout(() => {
+            const errorMessageElement = contactForm.querySelector(".errorMessage");
+            if (errorMessageElement) errorMessageElement.style.display = 'none';
+        }, 5000);
+        return; // Stop the function if form is not valid
+    }
     
 
+    // Need to add the unity tag, because contact 7 was not letting me post with out it. 
+    const formData = new FormData(contactForm);
+    const unitTagInput = contactForm.querySelector("input[name='_wpcf7_unit_tag']");
+    if (!unitTagInput) {
+        console.warn("Could not find the _wpcf7_unit_tag in the form.");
+        displayMessage("Something went wrong, please try again later!", contactForm, "error");
+        return; // Stop the function if the unit tag is missing
+    }
+    formData.append('_wpcf7_unit_tag', unitTagInput.value);
+
+    try {
+        await submitContactForm(formData); 
+        displayMessage("Your message was sent!", contactForm, "success");
+    } catch (error) {
+        
+        console.error('Submission Error:', error);
+        displayMessage("Something went wrong, please try again later!", contactForm, "error");
+    } finally {
+        contactForm.reset(); // Reset the form in both success and failure cases
+    }
 });
 
 
-}  
 
-
-
+}
 
 
