@@ -1,4 +1,4 @@
-// Contact form
+// Contact form and validation 
 
 import { displayMessage } from "../errorhandling/displayMessage.js";
 import { submitContactForm } from "./contactPOST.js";

@@ -20,6 +20,8 @@ export function initializeBlogFeatures(posts) {
     updateLoadMoreButtonVisibility(posts);
 }
 
+
+// Load more posts
 function setupLoadMoreButton(posts) {
     const button = document.querySelector(".button-blog button");
     if (!button) return;
@@ -34,6 +36,7 @@ function setupLoadMoreButton(posts) {
     });
 }
 
+// Sort by function 
 function setupSortByFeature(posts) {
     const selectElement = document.getElementById('sortby');
     if (!selectElement) return;
@@ -48,6 +51,7 @@ function setupSortByFeature(posts) {
     });
 }
 
+// Sorting based on date 
 function sortPosts(posts, sortOrder) {
     return posts.slice().sort((a, b) => {
         const dateA = new Date(a.acf.date_of_post), dateB = new Date(b.acf.date_of_post);
@@ -55,6 +59,7 @@ function sortPosts(posts, sortOrder) {
     });
 }
 
+// Remove button if all posts loaded 
 function updateLoadMoreButtonVisibility(currentPosts) {
     const button = document.querySelector(".button-blog button");
     if (!button) return;
