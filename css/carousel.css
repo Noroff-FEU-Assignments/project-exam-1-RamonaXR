@@ -88,45 +88,9 @@
 
 
 
-@media (min-width: 900px) {
-    .carousel-container .carousel-item {
-        display: none; 
-        transition: transform 0.7s ease;
-    }
-    
-    .carousel-container .carousel-item.active {
-        display: block; 
-        transform: scale(1.1); 
-        z-index: 2; 
-    }
-    
-
-    .love-container {
-        
-        max-width: 400px;
-       
-    }
-   
-}
 
 
 
-/* For screens wider than 1200px, show 3 items */
-@media (min-width: 1200px) {
-    .carousel-container .carousel-item {
-        display: none; /* Reset to hide all */
-        transition: transform 0.7s ease;
-        
-       
-    }
-    .carousel-container .carousel-item.active {
-        display: block; /* Show three items */
-        
-            transform: scale(1.1); /* Scale up the active item */
-            z-index: 2; 
-            
-    }
 
-   
-}
+
 
