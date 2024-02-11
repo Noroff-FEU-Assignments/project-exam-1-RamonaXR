@@ -135,6 +135,9 @@ if (!isValid) {
     } finally {
         contactForm.reset(); // Reset the form in both success and failure cases
     }
+    for (let [key, value] of formData.entries()) {
+        console.log(key, value);
+    }
 });
 
 
