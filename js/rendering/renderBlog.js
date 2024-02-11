@@ -87,31 +87,16 @@ import { errorParent } from "../errorhandling/errors.js";
 
 
 
-export function renderBlog(posts) {
+export function renderBlog(posts, append = false) {
     const parent = document.querySelector(".blogposts");
     if (!parent) {
         throw errorParent;
     }
-
-    // Modal setup
-    const modal = document.createElement("div");
-    modal.classList.add("modal");
-
-    const modalContent = document.createElement("img");
-    modalContent.classList.add("modal-content");
-    modal.append(modalContent);
-
-    const closeModal = document.createElement("span");
-    closeModal.classList.add("close-modal");
-    closeModal.textContent = "×";
-    modal.append(closeModal);
-
-    document.body.append(modal); // Append modal to body 
-
-    // Close modal 
-    closeModal.onclick = function() {
-        modal.style.display = "none";
+    if (!append) {
+        parent.innerHTML = ""; // Clear existing posts if not appending
     }
+
+   
 
     // Loop for all posts
     for (let i = 0; i < posts.length; i++) {
@@ -141,11 +126,7 @@ export function renderBlog(posts) {
         image.classList.add("posts-img");
         
 
-        // Image click event to open modal
-        image.onclick = function() {
-            modal.style.display = "flex";
-            modalContent.src = this.src; 
-        }
+        
 
         imageWrapper.append(image);
         element.append(imageWrapper);
@@ -190,10 +171,11 @@ export function renderBlog(posts) {
         
 
         parent.append(element);
-    }                       
+    }       
+}                
 
 
-    
+    /*
     // Close modal on outside click
     // Had to add touchstart- because tap outside did not work on mobile.
     window.addEventListener('touchstart', function(event) {
@@ -207,7 +189,7 @@ export function renderBlog(posts) {
             modal.style.display = "none";
         }
     }, false);
-}
+}*/
 
 
 

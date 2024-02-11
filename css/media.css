@@ -120,7 +120,12 @@ nav a:focus {
   }
 
 
-
+  @media (min-width: 900px) and (max-width: 1050px) {
+    .h2-posts,
+    .posts-carousel h2 {
+        min-height: 7.2em; /* Increased min-height for 3 lines of text, to keep content aligned*/
+    }
+}
 
 
 

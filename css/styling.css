@@ -137,6 +137,7 @@ button:hover,
     position: relative;
     width: 100%;
     padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    /*aspect-ratio: 16 / 9; Decieded to go for the approach above, since aspect-ratio: is supported of newer browsers*/
     background-size: cover;
     background-position: center;
 }
@@ -154,6 +155,7 @@ button:hover,
 
 
 .h2-posts {
+    min-height: 4.8em;
     font-weight: var(--weight400);
     font-size: var(--size24);
 }
