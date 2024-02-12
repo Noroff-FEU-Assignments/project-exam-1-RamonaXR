@@ -5,8 +5,8 @@ import { submitContactForm } from "./contactPOST.js";
 
 export function validateContactForm() {
 const contactForm = document.querySelector(".contact-form");
-const parentContainer = document.querySelector(".messageContainer");
-console.log(parentContainer);
+//const parentContainer = document.querySelector(".messageContainer");
+//console.log(parentContainer);
 
 // Real-time validation for Name
 const nameInput = document.getElementById("name");
@@ -135,9 +135,7 @@ if (!isValid) {
     } finally {
         contactForm.reset(); // Reset the form in both success and failure cases
     }
-    for (let [key, value] of formData.entries()) {
-        console.log(key, value);
-    }
+    
 });
 
 

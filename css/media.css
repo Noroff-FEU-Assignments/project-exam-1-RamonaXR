@@ -86,6 +86,21 @@ nav a:focus {
     .modal-content {
     max-width: 600px;
 }
+
+.about-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+
+.about-wrap {
+    max-width: 60%;
+   
+}
+
+
+
 }
 
 
@@ -117,7 +132,8 @@ nav a:focus {
         max-width: 600px; 
         
     }
-  }
+
+}
 
 
   @media (min-width: 900px) and (max-width: 1050px) {
@@ -145,6 +161,20 @@ nav a:focus {
         max-width: 400px;
        
     }
+
+
+    .post img {
+        max-width: 450px;
+        max-height: 650px;
+        
+    }
+
+    footer a,
+    .links-logo {
+        font-size: var(--size36);
+    }
+
+    
    
 }
 
