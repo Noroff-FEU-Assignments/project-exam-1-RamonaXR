@@ -28,13 +28,13 @@
 </script>
   </head>
   <body class="flex flex-column">
-    <div class="overlay hide"></div>
+    <div class="overlay visually-hide"></div>
     <header class="flex align-items-center">
       <a href="/index.html" class="logo-header">Beauty By Ramona</a>
       <div class="flex justify-end hamburger-container">
-        <div class="hamburger-wrap">
+        <button class="hamburger-wrap">
           <i class="fa-solid fa-bars fa-xl"></i>
-        </div>
+        </button>
       </div>
       <nav class="navigation flex flex-column">
         <div class="flex justify-center align-items-center closing-btn"><i class="fa-solid fa-xmark fa-lg"></i></div>
@@ -59,7 +59,7 @@
       </div>
         <h2 class="under-hero flex justify-center">Reasons to love yourself:</h2>
         <div class="love-container">
-          <div class="love-carousel-slide flex">
+          <div class="love-carousel-slide flex" aria-roledescription="carousel" aria-live="polite">
               <p class="love-carousel-item">"Love yourself first and everything else falls into line."</p>
               <p class="love-carousel-item">"You yourself, as much as anybody in the entire universe, deserve your love and affection."</p>
               <p class="love-carousel-item">"To fall in love with yourself is the first secret to happiness."</p>

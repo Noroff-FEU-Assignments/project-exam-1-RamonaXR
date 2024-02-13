@@ -2,26 +2,38 @@
 
 
 // Carousel at homepage
+// with aria-labels 
 
 
 export function renderHome(posts) {
     const parent = document.querySelector(".carousel-container");
+    parent.setAttribute("role", "list");
+    parent.setAttribute("aria-roledescription", "carousel");
     
     let currentIndex = 0;
 
     // Create left and right arrows outside populateCarousel to maintain their event listeners
     const leftArrow = document.createElement("button");
+    const iconLeft = document.createElement("i")
     leftArrow.classList.add("arrow", "left-arrow");
-    leftArrow.textContent = "Prev"; 
+    iconLeft.className = "fa-solid fa-arrow-left";
+    leftArrow.setAttribute("aria-label", "Previous slide");
+
+    leftArrow.append(iconLeft);
 
     const rightArrow = document.createElement("button");
+    const iconRight = document.createElement("i")
     rightArrow.classList.add("arrow", "right-arrow");
-    rightArrow.textContent = "Next"; 
+    rightArrow.setAttribute("aria-label", "Next slide");
+    
+    iconRight.className = "fa-solid fa-arrow-right";
+    rightArrow.append(iconRight);
 
     function populateCarousel() {
         // Clear existing content except arrows
         parent.innerHTML = ''; 
         parent.append(leftArrow);
+        
     
         //Decided to do this, based on screen size for a smoother loop of the carousel 
     //So when displaying 3 in the carousel i get 9 posts, when 2 I get 8. Even numbers.
@@ -45,6 +57,7 @@ export function renderHome(posts) {
     function createPostElement(post) {
         const element = document.createElement("article");
         element.classList.add("posts-carousel", "carousel-item");
+        element.setAttribute("role", "listitem");
         
 
         const imageWrapper = document.createElement("div");
@@ -97,12 +110,17 @@ export function renderHome(posts) {
     } 
 
 
-    
+    // Also tried adding som aria attributes here
+    //but I would have to refactor all my code. 
+    //Nest time I will keep it in mind from start. 
 
     function updateActiveItems() {
         const visibleItemCount = getVisibleItemsCount();
         const items = document.querySelectorAll(".carousel-item");
-        items.forEach(item => item.style.display = 'none');
+        
+        items.forEach(item => item.style.display = "none");
+        
+
         
         let activeWithinVisibleIndex = currentIndex % visibleItemCount; 
         let startIndexOfSet = currentIndex - activeWithinVisibleIndex;

@@ -41,13 +41,6 @@ nav ul {
     align-items: center;
 }
 
-.align-items-end {
-    align-items: flex-end;
-}
-
-.align-items-stretch {
-    align-items: stretch;
-}
 
 .flex-wrap {
     flex-wrap: wrap;
@@ -59,6 +52,3 @@ nav ul {
 
 
 
-.grid {
-    display: grid;
-}
