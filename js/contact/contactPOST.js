@@ -2,6 +2,7 @@
 // POSTing the contact form
 
 import { contactURL } from "../data/constants.js";
+import { displayMessage } from "../errorhandling/displayMessage.js";
 
 /*
 
@@ -44,6 +45,10 @@ export async function submitContactForm(formData) {
             const err = await response.json(); 
             throw new Error(err.message || `Failed to submit form, server responded with status: ${response.status}`);
         }
+
+       /* if (response.ok) {
+            displayMessage("Your message was sent", "success");
+        } */
 
         const data = await response.json();
         return data; 

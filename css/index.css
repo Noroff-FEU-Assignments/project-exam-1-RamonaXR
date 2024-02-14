@@ -8,7 +8,7 @@
 @import url(modal.css);
 @import url(media.css);
 
-/* Customs */
+/* Customs */ /* Custom variables.css */
 
 :root {
     --island: "Island Moments", sans-serif;

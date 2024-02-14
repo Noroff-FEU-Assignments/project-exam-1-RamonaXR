@@ -36,6 +36,18 @@ body {
   display: none;
 }
 
+.hidden {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  border: 0; 
+  background: transparent;
+  color: transparent;
+  overflow: hidden;
+  padding: 0;
+}
+
 main {
   flex: 1;
   gap: var(--gap-normal);

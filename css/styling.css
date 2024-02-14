@@ -406,8 +406,9 @@ footer {
 
 
 
-.about-section-1 h2, .about-section-2 h2,
-.about-section-1 p, .about-section-2 p, .about-h2 {
+.about-section-1 h2, 
+.about-section-1 p,
+.about-h2 {
     text-align: center;
     padding: var(--padding-10);
     
@@ -422,8 +423,7 @@ footer {
 }
 
 .about-h2,
-.about-section-1 h2,
-.about-section-2 h2 {
+.about-section-1 h2 {
     font-size: var(--size20);
     color: rgb(70, 66, 66);
     

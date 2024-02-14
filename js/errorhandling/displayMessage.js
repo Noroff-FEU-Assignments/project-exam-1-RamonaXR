@@ -1,7 +1,7 @@
-export function displayMessage(message, parent, state) {
+export function displayMessage(message, state, parent) {
     
-    const messageContainer = document.querySelector("#messageContainer"); 
-    messageContainer.innerHTML = ''; 
+    //const messageContainer = document.querySelector("#messageContainer"); 
+    parent.innerHTML = ''; 
 
     const messageWrap = document.createElement("div");
 
@@ -17,7 +17,7 @@ export function displayMessage(message, parent, state) {
 
     messageWrap.append(paragraphMessage);
 
-    messageContainer.append(messageWrap);
+    parent.append(messageWrap);
 
 
     

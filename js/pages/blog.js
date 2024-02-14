@@ -16,7 +16,7 @@ export async function createBlog() {
         initializeBlogFeatures(posts); 
     } catch (error) {
         console.log(error);
-        displayMessage(error, document.querySelector(".blogposts"), "error");
+        displayMessage(error, parent, "error");
     }
 }
 /*

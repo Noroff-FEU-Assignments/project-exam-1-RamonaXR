@@ -9,7 +9,7 @@
     height: 100%; 
     overflow: auto; 
     
-    background-color: rgba(0,0,0,0.4); 
+    background-color: rgba(0,0,0,0.7); 
      
     align-items: center; 
     justify-content: center;
@@ -26,7 +26,7 @@
     position: fixed;
     top: 10px;
     right: 35px;
-    color: #201d1d;
+    color: #f3eeee;
     font-size: var(--size48);
     font-weight: var(--weight600);
     cursor: pointer;

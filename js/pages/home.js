@@ -1,4 +1,5 @@
 import { posts } from "../data/posts.js";
+import { displayMessage } from "../errorhandling/displayMessage.js";
 import { renderHome } from "../rendering/renderHomeCarousel.js";
 
 
@@ -14,8 +15,8 @@ export async function createHome(){
         parent.innerHTML = "";
         renderHome(posts);
     } catch (error) {
-        console.log(error); // Add error! 
-        
+        console.log(error);
+        displayMessage(error, "error", parent)
     }
 }
 
