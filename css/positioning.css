@@ -1,3 +1,21 @@
 
 
+header {
+    position: sticky;
+}
 
+nav {
+    position: fixed;
+}
+
+nav {
+    top: 0;
+}
+
+nav {
+    right: -150px;
+}
+
+nav {
+    display: none;
+}

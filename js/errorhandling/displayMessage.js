@@ -1,3 +1,4 @@
+
 export function displayMessage(message, state, parent) {
     
     //const messageContainer = document.querySelector("#messageContainer"); 
@@ -18,7 +19,6 @@ export function displayMessage(message, state, parent) {
     messageWrap.append(paragraphMessage);
 
     parent.append(messageWrap);
-
-
+    
     
 }

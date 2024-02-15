@@ -8,12 +8,102 @@ header {
     background: var(--background-header);
 }
 
-.hero {
+nav,
+.hero,
+.posts,
+.posts-carousel,
+.about-wrap {
     background: var(--post-color);
+}
+
+.about-wrap,
+.posts,
+.posts-carousel {
+    box-shadow: var(--boxshadow);
+}
+
+header,
+.hero,
+footer {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     
 }
 
 .fa-xmark {
     color: rgb(45, 39, 39);
+}
+
+.links-header a,
+footer a {
+    color:rgb(62, 52, 52);
+}
+
+.logo-header {
+    color: rgb(44, 39, 39);
+}
+
+button:hover, 
+.button:hover {
+    background-color: rgb(196, 186, 186);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+button,
+.button {
+    color: white;
+}
+
+
+.hamburger-wrap {
+    color: black;
+}
+
+button,
+.button {
+  background: #4C4B4B;
+}
+
+.hero-h1 {
+    color: rgb(78, 69, 69);
+}
+
+.about-h2,
+.about-section-1 h2 {
+    color: rgb(70, 66, 66);
+}
+
+.contact-form {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+    background: #fff; 
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  border: 1px solid #ccc;
+}
+
+.error-message {
+    color: red;
+}
+
+.errorMessage {
+    background-color: rgb(239, 71, 45);
+}
+
+.invalid {
+    border: 2px solid red;
+}
+
+
+.successMessage {
+    background-color: rgb(178, 219, 178);
+}
+
+.overlay {
+    background-color: black;
+}
+
+.post-title-link {
+    color: inherit; 
 }

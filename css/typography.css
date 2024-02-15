@@ -4,39 +4,86 @@
 
 a {
     text-decoration: none;
-    font-size: var(--size24);
 }
 
-.links-header a,
-footer a {
-    font-weight: var(--weight400);
-    color:rgb(62, 52, 52);
+button,
+.button {
+    font-size: var(--size16);
 }
 
+.about-h2,
+.about-section-1 h2 {
+    font-size: var(--size20);
+}
 
 h1,
-.links a {
+.links a,
+.links-header a,
+.under-hero {
     font-size: var(--size32);
 }   
 
-.h2-home {
+a,
+.h2-home,
+.h2-posts,
+.post h2 {
     font-size: var(--size24);
 }
 
-.links-header a {
-    font-size: var(--size32);
+.logo-header {
+    font-size: var(--size36);
+}
+
+.links-header a,
+footer a,
+.h2-posts,
+.hero-h1 {
     font-weight: var(--weight400);
     
+}
+
+.post h2 {
+    font-weight: var(--weight500);
 }
 
 
 .links a,
 .links-header a,
-.under-hero {
+.under-hero,
+.logo-header,
+.hero-h1 {
     font-family: var(--island);
 }
 
 
-.hero {
+.hero,
+.posts,
+.posts-carousel,
+.post,
+.messageContainer,
+.form-section h2,
+.form-section p,
+.contact-h2,
+.contact-p,
+.about-section-1 h2, 
+.about-section-1 p,
+.about-h2,
+footer  {
     text-align: center;
 }
+
+.post-title-link {
+    text-decoration: none; 
+}
+.post-title-link:hover, .post-title-link:focus {
+    text-decoration: underline; 
+}
+
+.date-post {
+    font-size: 0.8rem;
+}
+
+.error-message {
+    font-size: 14px;
+}
+

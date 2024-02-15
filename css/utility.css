@@ -1,4 +1,4 @@
-
+/* Utility and flex for rendered content */
 
 .flex {
     display: flex;
@@ -50,5 +50,11 @@ nav ul {
     flex-wrap: nowrap;
 }
 
+.logo-header {
+    display: inline-block; 
+}
 
+nav {
+    display: none;
+}
 

@@ -1,93 +1,21 @@
 
-/* Header */
-
-header {
-    height: 80px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    z-index: 6;
-    width: 100%;
-    position: sticky;
-}
-
-.logo-header{
-    font-family: var(--island);
-    font-size: var(--size36);
-    display: inline-block; 
-    white-space: nowrap;
-    color: rgb(44, 39, 39);
-}
-/* Nav */ 
-
-nav {
-    position: fixed;
-    height: 100vh;
-    width: 150px;
-    top: 0px;
-    z-index: 10;
-    background-color: var(--post-color);
-    right: -150px;
-    padding: 20px 0 0 0;
-    display: none;
-    
-    
-}
-
-nav ul {
-    padding-top: 20px;
-    gap: 15px;
-    
-}
-
-nav a {
-    padding: 10px 0;
-}
-
-.closing-btn {
-    height: 40px;
-    width: 40px;
-}
+/* Shared styles */ 
 
 .hamburger-wrap,
-.closing-btn {
+.closing-btn,
+button,
+.button {
     cursor: pointer;
 }
 
-.hamburger-container {
-    flex: 1;
-}
 
-/* Body */
+/* Paddings */
 
 button,
-.button {
-  background: #4C4B4B;
-  font-family: var(--montserrat);
-  color: white;
-  font-size: var(--size16);
-  padding: var(--padding-10);
-  align-self: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  cursor: pointer;
-}
-
-button:hover, 
-.button:hover{
-    background-color: rgb(196, 186, 186);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-.hamburger-wrap {
-    background: none;
-    border: none; 
-    color: black;
-    
-    
-}
-
-/* Blog */
-
-
+.button,
+.sort-by,
+.sort-select,
+.blogposts,
 .blogposts a, 
 .blogposts img, 
 .blogposts h2,
@@ -98,24 +26,216 @@ button:hover,
 .posts h3,
 .posts-carousel img, 
 .posts-carousel h2,
-.posts-carousel h3  {
+.posts-carousel h3,
+.p-footer,
+header a,
+.hamburger-container,
+footer a,
+.hero-h2,
+.hero-p,
+.errorMessage,
+.successMessage,
+input[type="text"],
+input[type="email"],
+textarea,
+.about-section-1 h2, 
+.about-section-1 p,
+.about-h2 {
     padding: var(--padding-10);
 }
 
+nav ul {
+    padding-top: 20px;
+}
+
+nav a {
+    padding: 10px 0;
+}
+
+nav {
+    padding: 20px 0 0 0;
+}
 
 .h1-blog {
     padding: 30px;
+}
+
+.image-wrapper {
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    /*aspect-ratio: 16 / 9; Decided to go for the approach above, since aspect-ratio: is mostly supported of newer browsers*/
+}
+
+.content-wrapper,
+.button-blog,
+.post,
+.post p,
+.hero-h1,
+.contact-form {
+    padding: 20px;
+}
+
+.form-section h2,
+.form-section p,
+.contact-h2,
+.contact-p {
+    padding: 15px;
+}
+
+/* Widths */
+
+header,
+.hero,
+.image-wrapper,
+.image-wrapper img,
+.overlay,
+input[type="text"],
+input[type="email"],
+textarea,
+.contact-section, 
+.form-section,
+.contact-form  {
+    width: 100%;
+}
+
+
+.contact-section img {
+    width: 80%; 
+}
+
+.contact-section img,
+.contact-form {
+    max-width: 350px;
+}
+
+nav {
+    width: 150px;
+}
+
+.closing-btn {
+    width: 40px;
+}
+
+.posts,
+.posts-carousel {
+    max-width: 340px; 
+}
+
+.post img {
+    max-width: 250px;
+}
+
+
+.errorMessage,
+.successMessage {
+    width: 300px;
+}
+
+.img-hero {
+    width: 150px;
+}
+
+
+/* Heights */ 
+
+header {
+    height: 80px;
+}
+
+nav {
+    height: 100vh;
+}
+
+.closing-btn {
+    height: 40px;
+}
+
+.image-wrapper img,
+.overlay {
+    height: 100%;
+}
+
+.h2-posts {
+    min-height: 4.8em;
+}
+
+.content-wrapper {
+    min-height: 200px;
+}
+
+.post img {
+    max-height: 350px;
+}
+
+.img-hero {
+    height: 150px;
+}
+
+.contact-section img {
+    height: auto; 
+}
+
+/* Z-index */
+
+header {
+    z-index: 6;
+}
+
+nav {
+    z-index: 10;
+}
+
+.overlay {
+    z-index: 5;
+}
+
+.modal {
+    z-index: 15;
+}
+
+
+/* Others */ 
+.logo-header {
+    white-space: nowrap;
+}
+
+
+/* Nav */ 
+
+
+nav ul {
+    gap: 15px;
+}
+
+
+.hamburger-container {
+    flex: 1;
+}
+
+/* Body */
+
+button,
+.button {
+    align-self: center;
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 
 
-.sort-by {
-    padding: var(--padding-10);
+
+.hamburger-wrap {
+    background: none;
+    border: none; 
+    
 }
 
-.sort-select {
-    padding: var(--padding-10);
+/* Blog */
+
+
+
+.h1-blog {
+    margin-bottom: 20px;
 }
+
 
 
 .blogposts {
@@ -123,7 +243,6 @@ button:hover,
     flex-wrap: wrap;
     gap: 20px;
     justify-content: space-evenly;
-    padding: var(--padding-10);
 }
 
 .posts,
@@ -132,19 +251,11 @@ button:hover,
     flex: 1 1 200px; 
     display: flex;
     flex-direction: column;
-    background-color: var(--post-color);
-    box-shadow: var(--boxshadow);
     overflow: hidden; 
-    max-width: 340px; 
-    text-align: center;
-    
 }
 
 .image-wrapper {
     position: relative;
-    width: 100%;
-    padding-top: 56.25%; /* 16:9 Aspect Ratio */
-    /*aspect-ratio: 16 / 9; Decieded to go for the approach above, since aspect-ratio: is supported of newer browsers*/
     background-size: cover;
     background-position: center;
 }
@@ -153,42 +264,21 @@ button:hover,
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
     object-fit: cover;
-    
-
 }
 
-
-.h2-posts {
-    min-height: 4.8em;
-    font-weight: var(--weight400);
-    font-size: var(--size24);
-}
 
 .content-wrapper {
-    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     flex: 1; 
-    min-height: 200px;
 }
 
 .button-blog {
     margin-top: auto;
-    padding: 20px;
-    
 }
 
-.post-title-link {
-    color: inherit; 
-    text-decoration: none; 
-}
-.post-title-link:hover, .post-title-link:focus {
-    text-decoration: underline; 
-}
 
 /*Post*/
 
@@ -197,57 +287,23 @@ button:hover,
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    text-align: center;
-    padding: 20px;
     gap: 20px;
 }
 
-.post img {
-    max-width: 250px;
-    max-height: 350px;
-    
-}
-
-.post p {
-    padding:20px;
-}
 
 .post h1,
 .post h2 {
     margin-top: 15px;
     margin-bottom: 15px;
+    
 }
 
-.post h2 {
-    font-weight: var(--weight500);
-    font-size: var(--size24);
-}
 
 .button-back {
     margin-left: 15px;
 }
 
-.date-post {
-    font-size: 0.8rem;
-}
 
-/* Hero */
-
-.hero {
-    width: 100%;
-    
-}
-
-.hero-h1 {
-    padding: 20px;
-    font-family: var(--island);
-    font-weight: var(--weight400);
-    color: rgb(78, 69, 69);
-}
-
-.under-hero {
-    font-size: var(--size32);
-}
 
 /* Overlay */
 
@@ -255,71 +311,26 @@ button:hover,
     position: fixed;
     top: 0px;
     left: 0px;
-    height: 100%;
-    width: 100%;
-    background-color: black;
     opacity: 80%;
-    z-index: 5;
 }
 
-/* Home */ 
+
 
 
 /* Contact*/
 
 
-
-.invalid {
-    border: 2px solid red;
-}
-
-
-
-.successMessage {
-    
-    background-color: rgb(178, 219, 178);
-    padding: 10px;
-    display: block;
-    width: 300px;
-    display: inline-block;
-    
-}
-
+.successMessage,
 .errorMessage {
-    
     display: inline-block;
-    background-color: rgb(239, 71, 45);
-    padding: 10px;
-    
-    width: 300px;
 }
-
-.error-message {
-    color: red;
-    font-size: 14px;
-}
-
-.messageContainer {
-    width: 100%;
-    text-align: center;
-    position: fixed; 
-    top: 0;
-    left: 0;
-    z-index: 1000; 
-    justify-content: center; 
-    align-items: center;
-}
-
 
 
 input[type="text"],
 input[type="email"],
 textarea {
-  width: 100%; 
-  padding: 10px;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box; 
 }
@@ -328,40 +339,20 @@ textarea {
     margin-bottom: 20px;
 }
 
-.form-section h2,
-.form-section p,
-.contact-h2,
-.contact-p {
-    text-align: center;
-    padding: 15px;
-    
-}
-
-
-
-
 
 .contact-section, 
 .form-section {
-    width: 100%; 
     margin-bottom: 20px;
 }
 
 
 
 .contact-form {
-    width: 100%; 
-    max-width: 350px; 
     margin: 0 auto; 
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
     border-radius: 8px; 
-    background: #fff; 
 }
 
 .contact-section img {
-    width: 80%; 
-    max-width: 350px;
     height: auto; 
     margin-bottom: 20px; 
 }
@@ -369,30 +360,11 @@ textarea {
 /* Footer */
 
 
-.p-footer,
-header a,
-.hamburger-container,
-footer a,
-.hero-h2,
-.hero-p {
-    padding: var(--padding-10);
-} 
-
-
-
 .img-hero {
   border-radius: 50%;
-  height: 150px;
-  width: 150px;
   object-fit: contain;
   
 }
-
-footer {
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    text-align: center;
-}
-
 
 
 /* About */ 
@@ -404,35 +376,13 @@ footer {
 }
 
 
-
-
-.about-section-1 h2, 
-.about-section-1 p,
-.about-h2 {
-    text-align: center;
-    padding: var(--padding-10);
-    
-}
-
-
-
 .about-h1,
 .about-h2 {
-    
     margin-bottom: 15px; 
 }
 
-.about-h2,
-.about-section-1 h2 {
-    font-size: var(--size20);
-    color: rgb(70, 66, 66);
-    
-}
 
 .about-wrap {
-    
-    background-color: var(--post-color);
-    box-shadow: var(--boxshadow);
     max-width: 80%;
     margin-top: 20px;
 }

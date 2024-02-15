@@ -16,17 +16,6 @@ export async function createBlog() {
         initializeBlogFeatures(posts); 
     } catch (error) {
         console.log(error);
-        displayMessage(error, parent, "error");
+        displayMessage(error, "error", parent);
     }
 }
-/*
-// Blog page 
-export async function createBlog(){
-    try {
-        parent.innerHTML = "";
-        renderBlog(posts); 
-    } catch (error) {
-        console.log(error); 
-        displayMessage(error, parent, "error");
-    }
-}*/

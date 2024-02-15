@@ -1,8 +1,12 @@
 
 
-
+// Rendering content &
 // Carousel at homepage
-// with aria-labels 
+
+// I am aware that this code could have been split in smaller chucks and functions
+// and having the carousel in its own file 
+// I didn't want to risk ruining functioning code, so i'll keep it like this 
+// and rather keep it in mind from start next time
 
 
 export function renderHome(posts) {
@@ -110,7 +114,7 @@ export function renderHome(posts) {
     } 
 
 
-    // Also tried adding som aria attributes here
+    // Tried adding som aria attributes here
     //but I would have to refactor all my code. 
     //Nest time I will keep it in mind from start. 
 
