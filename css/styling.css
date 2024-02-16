@@ -147,14 +147,14 @@ nav {
 .contact-form,
 .carousel-container,
 .love-carousel-item {
-    padding: 20px;
+    padding: var(--padding-20);
 }
 
 .form-section h2,
 .form-section p,
 .contact-h2,
 .contact-p {
-    padding: 15px;
+    padding: var(--padding-15);
 }
 
 /* Widths */
@@ -372,7 +372,7 @@ nav ul,
 .blogposts,
 .post,
 .about-wrap {
-    gap: 20px; 
+    gap: var(--gap-nomral)
 }
 
 .carousel-container {

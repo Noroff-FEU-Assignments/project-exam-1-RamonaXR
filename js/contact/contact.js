@@ -4,26 +4,11 @@ import { displayMessage } from "../errorhandling/displayMessage.js";
 import { submitContactForm } from "./contactPOST.js";
 import { checkIfValid } from "./validate/checkIfValid.js";
 
-let isSubmitting = false;
 
 const contactForm = document.querySelector(".contact-form")
 
-contactForm.addEventListener("submit", async function(event) {
-    event.preventDefault(); 
-    if (isSubmitting) return; 
-    
-    isSubmitting = true; 
-    await validateContactForm(); 
-    isSubmitting = false; 
-});
-/*
-// Submit event listener
-contactForm.addEventListener("submit", function (event){
-    event.preventDefault();
-    
-    });
 
-validateContactForm(); */
+
 updateForm();
 
 // Input realtime 
@@ -131,8 +116,22 @@ export function validateMessage() {
 
 }
 
-// Async to make contact, before submitting data, or else success message will display even though I forced error with URL.
+// Just validate form without submitting 
 export async function validateContactForm() {
+    let isNameValid = validateName();
+    let isEmailValid = validateEmail();
+    let isSubjectValid = validateSubject();
+    let isMessageValid = validateMessage();
+
+    // Check if all fields are valid
+    let isValid = checkIfValid(isNameValid, isEmailValid, isSubjectValid, isMessageValid);
+    
+}
+
+// Async to make contact, before submitting data, or else success message will display even though I forced error with URL.
+// Just submitting when all fields are valid and pressing submit 
+    async function handleSubmit(event) {
+        event.preventDefault();
 
 
     let isNameValid = validateName(); 
@@ -147,9 +146,6 @@ export async function validateContactForm() {
 let isValid = checkIfValid(isNameValid, isEmailValid, isSubjectValid, isMessageValid);
 
 
-    
-
-    
 
     const messageContainer = document.querySelector("#messageContainer");
 
@@ -178,6 +174,9 @@ let isValid = checkIfValid(isNameValid, isEmailValid, isSubjectValid, isMessageV
     }
     
 };
+
+// Submit form by press, and not submitting when all fields are valid- because I had issues with that 
+contactForm.addEventListener("submit", handleSubmit);
 
 
 
