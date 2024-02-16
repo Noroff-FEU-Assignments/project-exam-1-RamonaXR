@@ -1,10 +1,12 @@
-/* Desktop */
+/* Desktop breakpoint */
 
 @media (min-width: 1200px) {
+
 header {
     padding: 30px;
     height: auto;
 }
+
 
 .navigation {
     position: static;
@@ -57,7 +59,9 @@ nav a:focus {
     white-space: nowrap;
 }
 }
-/* Posts */
+
+
+/* Min-width 630 */
 
 @media (min-width: 630px) {
 .posts {
@@ -66,6 +70,8 @@ nav a:focus {
     max-width: calc(50% - 20px);
 }
 }
+
+/* Min-width 900 */
 
 @media (min-width: 900px) {
 .posts {
@@ -83,44 +89,8 @@ nav a:focus {
 }
 
 .about-wrap {
-    max-width: 60%;
+    max-width: 70%;
 }
-}
-
-/* Contact */
-@media (min-width: 768px) {
-.contact-section {
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-.contact-section .form-section {
-    width: 50%;
-    padding: 20px;
-}
-
-.contact-section img {
-    width: 50%;
-    padding: 20px;
-    max-width: 600px;
-}
-
-.contact-form {
-    flex-grow: 1;
-    width: 100%;
-    max-width: 600px;
-}
-}
-
-@media (min-width: 900px) and (max-width: 1050px) {
-    .h2-posts,
-    .posts-carousel h2 {
-    min-height: 7.2em; /* Increased min-height for 3 lines of text, to keep content aligned*/
-}
-}
-
-@media (min-width: 900px) {
 .carousel-container .carousel-item {
     display: none;
     transition: transform 0.7s ease;
@@ -146,3 +116,42 @@ footer a,
     font-size: var(--size36);
 }
 }
+
+
+/* Min-width 768 */
+
+@media (min-width: 768px) {
+.contact-section {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.contact-section .form-section {
+    width: 50%;
+    padding: 20px;
+}
+
+.contact-section img {
+    width: 50%;
+    padding: 20px;
+    max-width: 600px;
+}
+
+.contact-form {
+    flex-grow: 1;
+    width: 100%;
+    max-width: 600px;
+}
+}
+
+
+/* Breakpoints to get more aligned text */
+
+@media (min-width: 900px) and (max-width: 1050px) {
+    .h2-posts,
+    .posts-carousel h2 {
+    min-height: 7.2em; /* Increased min-height for 3 lines of text, to keep content aligned*/
+}
+}
+

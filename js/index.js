@@ -1,5 +1,5 @@
 
-import { toggleMenu } from "./hamburger/hamburger.js";
+import { useMenu } from "./hamburger/hamburger.js";
 import { createBlog } from "./pages/blog.js";
 import { createPost } from "./pages/post.js";
 import { createHome } from "./pages/home.js";
@@ -12,7 +12,7 @@ import { initializeLoveCarousel } from "./carousel/carousel.js";
 
 
 // Hamburger menu
-toggleMenu();
+useMenu();
 
 
 // Router should have been in it's own file, aware of that. 

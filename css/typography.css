@@ -46,6 +46,11 @@ footer a,
     font-weight: var(--weight500);
 }
 
+.close-modal {
+    font-size: var(--size48);
+    font-weight: var(--weight600);
+}
+
 
 .links a,
 .links-header a,
@@ -68,6 +73,7 @@ footer a,
 .about-section-1 h2, 
 .about-section-1 p,
 .about-h2,
+.love-carousel-item,
 footer  {
     text-align: center;
 }

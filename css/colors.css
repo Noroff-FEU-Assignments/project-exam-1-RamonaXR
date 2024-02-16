@@ -107,3 +107,11 @@ textarea {
 .post-title-link {
     color: inherit; 
 }
+
+.modal {
+    background-color: rgba(0,0,0,0.7); 
+}
+
+.close-modal {
+    color: #f3eeee;
+}

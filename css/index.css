@@ -4,44 +4,11 @@
 @import url(typography.css);
 @import url(styling.css);
 @import url(positioning.css);
-@import url(carousel.css);
-@import url(modal.css);
+@import url(variables.css);
 @import url(media.css);
 
-/* Customs */ /* Custom variables.css */
-
-:root {
-    --island: "Island Moments", sans-serif;
-    --montserrat: "Montserrat", sans-serif;
-
-    --weight400: 400;
-    --weight500: 500;
-    --weight600: 600;
-
-    --lineheight: 1.5;
-
-    --size16: 1rem;
-    --size20: 1.25rem;
-    --size24: 1.5rem;
-    --size32: 2rem;
-    --size36: 2.25rem;
-    --size48: 3rem;
-
-    --border-radius: 20px; 
-    --gap-normal: 20px;
-    --padding-10: 10px;
-
-    --boxshadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-
-    --background-header: rgba(241, 205, 209, 0.96);
-    --background-footer: rgba(209, 198, 199, 0.96);
-    --cta-color: rgba(0, 0, 0, 0.70);
-    --post-color:  #FAF1F1;
-
-    --height-small: 41px;
-    --width-small: 41px;
 
 
-}
+
 
 

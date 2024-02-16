@@ -33,7 +33,7 @@ export function renderHome(posts) {
     iconRight.className = "fa-solid fa-arrow-right";
     rightArrow.append(iconRight);
 
-    function populateCarousel() {
+    function addContentCarousel() {
         // Clear existing content except arrows
         parent.innerHTML = ''; 
         parent.append(leftArrow);
@@ -163,11 +163,11 @@ export function renderHome(posts) {
         //First it only worked when the width was set, but not when resizing the window
         //in responsive mode. Should work now. 
         window.addEventListener('resize', function() {
-            populateCarousel(); 
+            addContentCarousel(); 
         });
     }
 
-    populateCarousel(); 
+    addContentCarousel(); 
     attachEventListeners(); 
 
 

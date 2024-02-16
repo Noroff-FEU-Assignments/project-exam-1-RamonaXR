@@ -8,8 +8,7 @@
     flex-direction: row;
 }
 
-.flex-column,
-nav ul {
+.flex-column {
     flex-direction: column;
 }
 
@@ -29,6 +28,7 @@ nav ul {
     justify-content: space-between;
 }
 
+
 .justify-space-around {
     justify-content: space-around;
 }
@@ -44,17 +44,5 @@ nav ul {
 
 .flex-wrap {
     flex-wrap: wrap;
-}
-
-.flex-nowrap {
-    flex-wrap: nowrap;
-}
-
-.logo-header {
-    display: inline-block; 
-}
-
-nav {
-    display: none;
 }
 

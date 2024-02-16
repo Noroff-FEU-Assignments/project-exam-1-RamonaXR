@@ -11,7 +11,7 @@ const menuButton = document.querySelector(".hamburger-wrap");
 // and other ways to make it more accessible for screen readers. 
 //But it was messing a lot with the hamburger menus functionality, so I'm putting it aside for this time. 
 
-export function toggleMenu() {
+export function useMenu() {
     
 
     menuButton.addEventListener("click", function() {
@@ -46,8 +46,18 @@ function menuAction() {
     navElement.style.transition = "500ms";
 }
 
+// Adding eventlistener for window resize
+// So that the nav links for desktop appear, after displaying hamburgermenu 
+// when resizing the window back and forth in liveserver or inspection
+window.addEventListener('resize', function() {
+    if (window.innerWidth >= 1200) {
+        
+        navElement.style.display = ''; 
+        navElement.style.right = ''; 
+        overlay.classList.add('visually-hide'); 
 
-
+    }
+});
 
 
 

@@ -4,11 +4,29 @@ header {
     position: sticky;
 }
 
-nav {
+nav,
+.overlay,
+.modal,
+.close-modal {
     position: fixed;
 }
 
-nav {
+.image-wrapper img,
+.arrow {
+    position: absolute;
+}
+
+.image-wrapper,
+.carousel-container,
+.love-container {
+    position: relative;
+}
+
+    
+
+nav,
+.overlay,
+.image-wrapper img {
     top: 0;
 }
 
@@ -18,4 +36,37 @@ nav {
 
 nav {
     display: none;
+}
+
+.successMessage,
+.errorMessage,
+input[type="text"],
+input[type="email"],
+textarea {
+    display: inline-block;
+}
+
+.overlay,
+.image-wrapper img,
+.left-arrow {
+    left: 0;
+}
+
+.right-arrow,
+.overlay {
+    right: 0;
+}
+
+.image-wrapper {
+    background-position: center;
+}
+
+
+.arrow {
+    top: 50%;
+}
+
+.close-modal {
+    top: 10px;
+    right: 35px;
 }
