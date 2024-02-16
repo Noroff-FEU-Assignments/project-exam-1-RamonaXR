@@ -4,16 +4,26 @@ import { displayMessage } from "../errorhandling/displayMessage.js";
 import { submitContactForm } from "./contactPOST.js";
 import { checkIfValid } from "./validate/checkIfValid.js";
 
-
+let isSubmitting = false;
 
 const contactForm = document.querySelector(".contact-form")
 
+contactForm.addEventListener("submit", async function(event) {
+    event.preventDefault(); 
+    if (isSubmitting) return; 
+    
+    isSubmitting = true; 
+    await validateContactForm(); 
+    isSubmitting = false; 
+});
+/*
 // Submit event listener
 contactForm.addEventListener("submit", function (event){
     event.preventDefault();
+    
     });
 
-validateContactForm();
+validateContactForm(); */
 updateForm();
 
 // Input realtime 
@@ -80,7 +90,7 @@ export function validateSubject() {
     const subjectError = document.getElementById("subject-error");
     let isSubjectValid = false;
 
-    if (subjectInput.value.length < 15 && subjectInput.value !== "") {
+    if (subjectInput.value.length < 16 && subjectInput.value !== "") {
     subjectInput.classList.add("invalid");
     subjectError.textContent =
         "Subject should be more than 15 characters long.";
@@ -104,7 +114,7 @@ export function validateMessage() {
     const messageError = document.getElementById("message-error");
     let isMessageValid = false;
     
-    if (messageInput.value.length < 25 && messageInput.value !== "") {
+    if (messageInput.value.length < 26 && messageInput.value !== "") {
     messageInput.classList.add("invalid");
     messageError.textContent =
     "Message content should be more than 25 characters long.";
