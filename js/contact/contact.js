@@ -25,7 +25,7 @@ export function updateForm() {
     textArea.addEventListener("change", validateField);
 }
 
-
+// Validate name, email, subject, message 
 
 export function validateName() {
     const nameInput = document.getElementById("name");
@@ -116,6 +116,7 @@ export function validateMessage() {
 
 }
 
+
 export function validateField() {
     validateName();
     validateEmail();
@@ -128,7 +129,7 @@ export function validateField() {
 // Async to make contact, before submitting data, or else success message will display even though I forced error with URL.
 // Just submitting when all fields are valid and pressing submit 
     async function handleSubmit(event) {
-        event.preventDefault();
+    event.preventDefault();
 
 
     let isNameValid = validateName(); 
