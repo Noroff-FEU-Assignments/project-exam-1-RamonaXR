@@ -78,19 +78,16 @@ export function renderPost(post){
 
         parent.append(element);
 
-    // Close modal on outside click
-    // Had to add touchstart- because tap outside did not work on mobile.
-    /*
-    window.addEventListener('touchstart', function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }, false); */
+    
 
-    modal.addEventListener('click',  function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }, false);
-    }
+
+
+
+    // Close modal on outside click
+    
+    modal.addEventListener("click", function() {
+        modal.style.display = "none";
+    })
+    
+    } 
 
