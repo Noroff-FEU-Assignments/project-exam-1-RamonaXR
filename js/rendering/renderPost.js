@@ -7,25 +7,25 @@ export function renderPost(post){
     const parent = document.querySelector(".post");
     parent.innerHTML = "";
      // Modal setup
-     const modal = document.createElement("div");
-     modal.classList.add("modal");
- 
-     const modalContent = document.createElement("img");
-     modalContent.classList.add("modal-content");
-     modal.append(modalContent);
- 
-     const closeModal = document.createElement("span");
-     closeModal.classList.add("close-modal");
-     closeModal.textContent = "×";
-     modal.append(closeModal);
- 
-     document.body.append(modal); // Append modal to body 
- 
+    const modal = document.createElement("div");
+    modal.classList.add("modal");
+
+    const modalContent = document.createElement("img");
+    modalContent.classList.add("modal-content");
+    modal.append(modalContent);
+
+    const closeModal = document.createElement("span");
+    closeModal.classList.add("close-modal");
+    closeModal.textContent = "×";
+    modal.append(closeModal);
+
+    document.body.append(modal); // Append modal to body 
+
      // Close modal 
-     closeModal.onclick = function() {
-         modal.style.display = "none";
-     }
- 
+    closeModal.onclick = function() {
+        modal.style.display = "none";
+    }
+
 
         const element = document.createElement("article");
         element.classList.add("post");
@@ -80,13 +80,14 @@ export function renderPost(post){
 
     // Close modal on outside click
     // Had to add touchstart- because tap outside did not work on mobile.
+    /*
     window.addEventListener('touchstart', function(event) {
         if (event.target == modal) {
             modal.style.display = "none";
         }
-    }, false);
+    }, false); */
 
-    window.addEventListener('click',  function(event) {
+    modal.addEventListener('click',  function(event) {
         if (event.target == modal) {
             modal.style.display = "none";
         }

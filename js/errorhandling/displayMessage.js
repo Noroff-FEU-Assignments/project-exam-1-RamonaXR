@@ -1,7 +1,7 @@
 
 export function displayMessage(message, state, parent) {
     
-    //const messageContainer = document.querySelector("#messageContainer"); 
+    
     parent.innerHTML = ''; 
 
     const messageWrap = document.createElement("div");

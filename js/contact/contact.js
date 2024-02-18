@@ -17,12 +17,12 @@ export function updateForm() {
     const textArea = document.querySelector("textarea");
 
     elements.forEach(input => {
-        input.addEventListener("blur", validateContactForm);
-        input.addEventListener("change", validateContactForm);
+        input.addEventListener("blur", validateField);
+        input.addEventListener("change", validateField);
     });
 
-    textArea.addEventListener("blur", validateContactForm);
-    textArea.addEventListener("change", validateContactForm);
+    textArea.addEventListener("blur", validateField);
+    textArea.addEventListener("change", validateField);
 }
 
 
@@ -116,17 +116,14 @@ export function validateMessage() {
 
 }
 
-// Just validate form without submitting 
-export async function validateContactForm() {
-    let isNameValid = validateName();
-    let isEmailValid = validateEmail();
-    let isSubjectValid = validateSubject();
-    let isMessageValid = validateMessage();
-
-    // Check if all fields are valid
-    let isValid = checkIfValid(isNameValid, isEmailValid, isSubjectValid, isMessageValid);
-    
+export function validateField() {
+    validateName();
+    validateEmail();
+    validateSubject();
+    validateMessage();
 }
+
+
 
 // Async to make contact, before submitting data, or else success message will display even though I forced error with URL.
 // Just submitting when all fields are valid and pressing submit 
@@ -142,7 +139,7 @@ export async function validateContactForm() {
 
 
 
-
+// Check if all fields are valid
 let isValid = checkIfValid(isNameValid, isEmailValid, isSubjectValid, isMessageValid);
 
 
@@ -175,7 +172,7 @@ let isValid = checkIfValid(isNameValid, isEmailValid, isSubjectValid, isMessageV
     
 };
 
-// Submit form by press, and not submitting when all fields are valid- because I had issues with that 
+// Submit form by click-submit, and not submitting when all fields are valid- because I had issues with that 
 contactForm.addEventListener("submit", handleSubmit);
 
 
