@@ -2,7 +2,7 @@
 
 ## Beauty By Ramona
 
-![image](/Screenshot%202024-02-27%20at%2019.27.31.png)
+![image](/Screenshot%202024-02-26%20at%2019.50.45.png)
 
 A simple overview of the use/purpose of the project.
 
